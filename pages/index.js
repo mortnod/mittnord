@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-
 import Head from 'next/head';
-import Card from '../components/card';
+
+import Cards from '../components/cards';
 
 export default function IndexPage() {
   return (
@@ -13,27 +13,15 @@ export default function IndexPage() {
           rel="stylesheet"
         />
       </Head>
-      <div sx={{ mt: 20, mx: 'auto', p: 3, maxWidth: '1410px' }}>
-        <div
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(6, minmax(0, 1fr))',
-            gap: 3,
-          }}
-        >
-          <Card heading="Blackboard" />
-          <Card heading="Epost" />
-          <Card heading="Timeplan" />
-          <Card heading="Office 365" />
-          <Card heading="Studweb" />
-          <Card heading="Middag" />
-          <Card heading="Mazemap" />
-          <Card heading="Book rom" />
-          <Card heading="Programvare" />
-          <Card heading="Farm" />
-          <Card heading="Karakterstat." />
-          <Card heading="Trening" />
-        </div>
+      <div
+        sx={{
+          mt: 20,
+          mx: 'auto',
+          p: [2, null, 3],
+          maxWidth: ['100%', null, '630px', '840px', '1270px'],
+        }}
+      >
+        <Cards />
       </div>
     </>
   );

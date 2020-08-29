@@ -7,13 +7,9 @@ export default function Heading({ children }) {
       sx={{
         color: 'gray.800',
         fontWeight: 'bold',
-        textAlign: 'center',
-        fontSize: '2vw',
-        marginTop: '1vw',
-
-        ':hover': {
-          color: 'red.500',
-        },
+        fontSize: ['6vw', '4.6vw', '26px'],
+        mt: ['3vw', '1vw', 0],
+        mb: ['4vw', '3vw', '4'],
       }}
     >
       {children}

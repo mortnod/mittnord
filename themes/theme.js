@@ -1,3 +1,10 @@
+const breakpoints = [
+  '480px', // 3 cards per column (fluid width)
+  '640px', // 3 cards per column (fixes width)
+  '850px', // 4 cards per column (fixed width)
+  '1270px', // 6 cards per column (fixed width)
+];
+
 const space = {
   '0': '0',
   '1': '0.25rem',
@@ -58,7 +65,7 @@ const space = {
   '9/12': '75%',
   '10/12': '83.333333%',
   '11/12': '91.666667%',
-  full: '100%',
+  '1/1': '100%',
 };
 
 const colors = {
@@ -212,6 +219,7 @@ const radii = {
 };
 
 export default {
+  breakpoints,
   space,
   sizes: space,
   fonts,
