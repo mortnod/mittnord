@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import Head from 'next/head';
 
 import Cards from '../components/cards';
+import ColorModeSelector from '../components/colorModeSelector';
 
 export default function IndexPage() {
   return (
@@ -22,6 +23,7 @@ export default function IndexPage() {
         }}
       >
         <Cards />
+        <ColorModeSelector />
       </div>
     </>
   );
