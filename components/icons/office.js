@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const Office = () => (
   <svg
-    sx={{ width: ['45%', null, '55%'] }}
+    sx={{ width: ['45%', null, '55%'], fill: 'currentColor' }}
     viewBox="0 0 71 86"
     xmlns="http://www.w3.org/2000/svg"
   >

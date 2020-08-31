@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const Calendar = () => (
   <svg
-    sx={{ width: ['45%', null, '55%'] }}
+    sx={{ width: ['45%', null, '55%'], fill: 'currentColor' }}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
   >

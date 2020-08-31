@@ -7,12 +7,16 @@ const AspectRatioOuter = ({ children }) => (
   <div
     sx={{
       position: 'relative',
-      bg: 'white',
+      bg: 'card',
       width: '100%',
       pb: '100%',
       borderRadius: 2,
       boxShadow: 3,
       overflow: 'hidden',
+
+      ':hover': {
+        bg: 'cardHover',
+      },
     }}
   >
     {children}
@@ -46,6 +50,7 @@ export default function Card({ heading, icon }) {
             flexDirection: 'column',
             alignItems: 'center',
             p: [3, 5, 8],
+            color: 'icon',
           }}
         >
           <Heading>{heading}</Heading>
