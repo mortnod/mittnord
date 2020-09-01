@@ -4,6 +4,8 @@ import Head from 'next/head';
 
 import Cards from '../components/cards';
 import ColorModeSelector from '../components/colorModeSelector';
+import NorthernLightsBar from '../components/northernLightsBar';
+import Header from '../components/header/header';
 
 export default function IndexPage() {
   return (
@@ -14,14 +16,16 @@ export default function IndexPage() {
           rel="stylesheet"
         />
       </Head>
+      <NorthernLightsBar />
       <div
         sx={{
-          mt: 20,
+          mt: 8,
           mx: 'auto',
           p: [2, null, 3],
           maxWidth: ['100%', null, '630px', '840px', '1270px'],
         }}
       >
+        <Header />
         <Cards />
         <ColorModeSelector />
       </div>
