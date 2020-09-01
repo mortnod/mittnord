@@ -6,8 +6,9 @@ export default function Heading({ children }) {
     <h2
       sx={{
         color: 'heading',
-        fontWeight: 'bold',
-        fontSize: ['6vw', '4.6vw', '26px'],
+        fontWeight: '500',
+        letterSpacing: 'wide',
+        fontSize: ['5.2vw', '3.6vw', '22px'],
         mt: ['3vw', '1vw', 0],
         mb: ['4vw', '3vw', '4'],
       }}
