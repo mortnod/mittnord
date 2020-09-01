@@ -1,19 +1,20 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Books from './icons/books';
+import Books from '../icons/books';
+import Calendar from '../icons/calendar';
+import Canvas from '../icons/canvas';
+import Cutlery from '../icons/cutlery';
+import GraduationCap from '../icons/graduationCap';
+import Igloo from '../icons/igloo';
+import LaptopMedical from '../icons/laptopMedical';
+import Map from '../icons/map';
+import Office from '../icons/office';
+import PaperPlane from '../icons/paperPlane';
+import Print from '../icons/print';
+import Virus from '../icons/virus';
+
 import Card from './card';
-import Calendar from './icons/calendar';
-import Canvas from './icons/canvas';
-import Cutlery from './icons/cutlery';
-import GraduationCap from './icons/graduationCap';
-import Igloo from './icons/igloo';
-import LaptopMedical from './icons/laptopMedical';
-import Map from './icons/map';
-import Office from './icons/office';
-import PaperPlane from './icons/paperPlane';
-import Print from './icons/print';
-import Virus from './icons/virus';
 
 const Cards = () => {
   return (

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Heading from './heading';
+import CardHeading from './cardHeading';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -57,7 +57,7 @@ export default function Card({ heading, icon }) {
             },
           }}
         >
-          <Heading>{heading}</Heading>
+          <CardHeading>{heading}</CardHeading>
           <Icon />
         </div>
       </AspectRatioInner>

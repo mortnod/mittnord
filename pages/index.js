@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import Head from 'next/head';
 
-import Cards from '../components/cards';
+import Cards from '../components/cards/cards';
 import ColorModeSelector from '../components/colorModeSelector';
 import NorthernLightsBar from '../components/northernLightsBar';
 import Header from '../components/header/header';

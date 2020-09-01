@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-export default function Heading({ children }) {
+export default function CardHeading({ children }) {
   return (
     <h2
       sx={{
