@@ -150,11 +150,20 @@ const letterSpacings = {
   widest: '0.25em',
 };
 
+const fontSizes = {
+  xs: '12px',
+  sm: '14px',
+  md: '16px',
+  lg: '22px',
+  xl: '28px',
+};
+
 export default {
   breakpoints,
   space,
   sizes: space,
   fonts,
+  fontSizes,
   letterSpacings,
   colors,
   radii,

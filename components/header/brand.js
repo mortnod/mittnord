@@ -9,7 +9,7 @@ export default function Brand() {
         color: 'heading',
         letterSpacing: 'wider',
         fontWeight: 'bold',
-        fontSize: ['22px', null, '28px'],
+        fontSize: ['lg', null, 'xl'],
         lineHeight: 1,
       }}
     >
