@@ -140,11 +140,22 @@ const colors = {
   },
 };
 
+const letterSpacings = {
+  tightest: '-0.05em',
+  tighter: '-0.025em',
+  tight: '-0.0125em',
+  normal: 'normal',
+  wide: '0.0625em',
+  wider: '0.125em',
+  widest: '0.25em',
+};
+
 export default {
   breakpoints,
   space,
   sizes: space,
   fonts,
+  letterSpacings,
   colors,
   radii,
   shadows,
