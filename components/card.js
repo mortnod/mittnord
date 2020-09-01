@@ -51,6 +51,10 @@ export default function Card({ heading, icon }) {
             alignItems: 'center',
             p: [3, 5, 8],
             color: 'icon',
+
+            ':hover': {
+              color: 'iconHover',
+            },
           }}
         >
           <Heading>{heading}</Heading>
