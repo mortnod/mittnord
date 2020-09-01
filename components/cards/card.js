@@ -37,12 +37,13 @@ const AspectRatioInner = ({ children }) => (
   </div>
 );
 
-export default function Card({ heading, icon }) {
+export default function Card({ heading, icon, href }) {
   const Icon = icon;
   return (
     <AspectRatioOuter>
       <AspectRatioInner>
-        <div
+        <a
+          href={href}
           sx={{
             width: '100%',
             height: '100%',
@@ -59,7 +60,7 @@ export default function Card({ heading, icon }) {
         >
           <CardHeading>{heading}</CardHeading>
           <Icon />
-        </div>
+        </a>
       </AspectRatioInner>
     </AspectRatioOuter>
   );
