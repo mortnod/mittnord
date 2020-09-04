@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'theme-ui';
+import 'focus-visible';
 
 import theme from '../constants/theme';
 

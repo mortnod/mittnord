@@ -11,6 +11,10 @@ export default function CardHeading({ children }) {
         fontSize: ['5.2vw', '3.6vw', 'lg'],
         mt: ['3vw', '1vw', 0],
         mb: ['4vw', '3vw', '4'],
+
+        '.focus-visible &': {
+          color: 'background',
+        },
       }}
     >
       {children}

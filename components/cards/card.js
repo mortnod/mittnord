@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import CardHeading from './cardHeading';
+import { northernLightsFocus } from '../../constants/northernLightsAnimation';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -10,7 +11,6 @@ const AspectRatioOuter = ({ children }) => (
       width: '100%',
       pb: '100%',
       boxShadow: 3,
-      overflow: 'hidden',
     }}
   >
     {children}
@@ -33,6 +33,7 @@ const AspectRatioInner = ({ children }) => (
 
 export default function Card({ heading, icon, href }) {
   const Icon = icon;
+
   return (
     <AspectRatioOuter>
       <AspectRatioInner>
@@ -48,10 +49,15 @@ export default function Card({ heading, icon, href }) {
             textDecoration: 'none',
             bg: 'card',
             color: 'icon',
+            outline: 'none',
 
-            ':hover, :focus': {
+            ':hover': {
               color: 'iconHover',
               bg: 'cardHover',
+            },
+
+            '&.focus-visible': {
+              ...northernLightsFocus,
             },
           }}
         >
