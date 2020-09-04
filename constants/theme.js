@@ -109,6 +109,8 @@ const colors = {
   icon: '#BACCEC',
   iconHover: '#E4F1FF',
   danger: '#E46A5E',
+  gradient1: '#7ABBFE',
+  gradient2: '#B0FDC4',
   modes: {
     blue: {
       background: 'white',
@@ -118,6 +120,8 @@ const colors = {
       icon: '#E3F6FF',
       iconHover: 'white',
       danger: '#E46A5E',
+      gradient1: '#7ABBFE',
+      gradient2: '#B0FDC4',
     },
     dark: {
       background: '#101419',
@@ -127,6 +131,8 @@ const colors = {
       icon: '#BACCEC',
       iconHover: '#E4F1FF',
       danger: '#E46A5E',
+      gradient1: '#7ABBFE',
+      gradient2: '#B0FDC4',
     },
     light: {
       background: 'white',
@@ -136,6 +142,8 @@ const colors = {
       icon: '#282828',
       iconHover: '#0C0C0C',
       danger: '#E46A5E',
+      gradient1: '#7ABBFE',
+      gradient2: '#93D7A5',
     },
   },
 };

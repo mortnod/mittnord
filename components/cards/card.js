@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import CardHeading from './cardHeading';
-import { northernLightsFocus } from '../../constants/northernLightsAnimation';
+import gradientAnimation from '../../utils/gradientAnimation';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -57,7 +57,7 @@ export default function Card({ heading, icon, href }) {
             },
 
             '&.focus-visible': {
-              ...northernLightsFocus,
+              ...gradientAnimation('background', 'large'),
             },
           }}
         >

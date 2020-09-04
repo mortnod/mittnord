@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import Cards from '../components/cards/cards';
 import ColorModeSelector from '../components/colorModeSelector';
-import NorthernLightsBar from '../components/northernLightsBar';
+import GradientBar from '../components/gradientBar';
 import Header from '../components/header/header';
 
 export default function IndexPage() {
@@ -16,7 +16,7 @@ export default function IndexPage() {
           rel="stylesheet"
         />
       </Head>
-      <NorthernLightsBar />
+      <GradientBar />
       <div
         sx={{
           mt: 8,

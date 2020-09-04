@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { northernLightsTextAnimation } from '../../constants/northernLightsAnimation';
+import gradientAnimation from '../../utils/gradientAnimation';
 
 export default function Brand() {
   return (
@@ -15,7 +15,7 @@ export default function Brand() {
     >
       MITT
       <br />
-      <span sx={{ ...northernLightsTextAnimation }}>NORD</span>
+      <span sx={{ ...gradientAnimation('text') }}>NORD</span>
     </h2>
   );
 }
