@@ -50,6 +50,7 @@ export default function Card({ heading, icon, href }) {
             bg: 'card',
             color: 'icon',
             outline: 'none',
+            position: 'relative',
 
             ':hover': {
               color: 'iconHover',
@@ -58,6 +59,12 @@ export default function Card({ heading, icon, href }) {
 
             '&.focus-visible': {
               ...gradientAnimation('background', 'large'),
+            },
+
+            '@media (pointer: fine)': {
+              ':active': {
+                top: '2px',
+              },
             },
           }}
         >
