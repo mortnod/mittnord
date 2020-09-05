@@ -11,10 +11,8 @@ export default function IndexPage() {
   return (
     <>
       <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* Azo Sans via Adobe Fonts */}
+        <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
       </Head>
       <GradientBar />
       <div
