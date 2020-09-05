@@ -1,4 +1,4 @@
-export const colorModes = ['aurora', 'daylight', 'dusk', 'dawn'];
+import colors from './colors';
 
 const breakpoints = [
   '480px', // 3 cards per column (fluid width)
@@ -101,75 +101,6 @@ const radii = {
   full: '9999px',
 };
 
-const colors = {
-  background: '#101419',
-  heading: 'white',
-  card: '#141A24',
-  cardHover: '#1E2634',
-  icon: '#BACCEC',
-  iconHover: '#E4F1FF',
-  danger: '#E46A5E',
-  gradient1: '#7ABBFE',
-  gradient2: '#B0FDC4',
-  modes: {
-    blue: {
-      background: 'white',
-      heading: 'white',
-      card: '#01628C',
-      cardHover: '#005275',
-      icon: '#E3F6FF',
-      iconHover: 'white',
-      danger: '#E46A5E',
-      gradient1: '#7ABBFE',
-      gradient2: '#B0FDC4',
-    },
-    aurora: {
-      background: '#101419',
-      heading: 'white',
-      card: '#141A24',
-      cardHover: '#1E2634',
-      icon: '#BACCEC',
-      iconHover: '#E4F1FF',
-      danger: '#E46A5E',
-      gradient1: '#7ABBFE',
-      gradient2: '#B0FDC4',
-    },
-    daylight: {
-      background: 'white',
-      heading: '#2d3748',
-      card: '#F0F0F0',
-      cardHover: '#E0E0E0',
-      icon: '#282828',
-      iconHover: '#0C0C0C',
-      danger: '#E46A5E',
-      gradient1: '#7ABBFE',
-      gradient2: '#93D7A5',
-    },
-    dusk: {
-      background: '#101419',
-      heading: 'white',
-      card: '#141A24',
-      cardHover: '#1E2634',
-      icon: '#BACCEC',
-      iconHover: '#E4F1FF',
-      danger: '#E46A5E',
-      gradient1: '#FF585D',
-      gradient2: '#FFA300',
-    },
-    dawn: {
-      background: 'white',
-      heading: '#2d3748',
-      card: '#F0F0F0',
-      cardHover: '#E0E0E0',
-      icon: '#282828',
-      iconHover: '#0C0C0C',
-      danger: '#E46A5E',
-      gradient1: '#FF585D',
-      gradient2: '#FFA300',
-    },
-  },
-};
-
 const letterSpacings = {
   tightest: '-0.05em',
   tighter: '-0.025em',
@@ -208,3 +139,6 @@ export default {
     },
   },
 };
+
+export const colorModes = Object.keys(colors.modes);
+export const DEFAULT_COLOR_MODE = 'default';

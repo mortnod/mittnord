@@ -1,5 +1,7 @@
 import { useThemeUI } from 'theme-ui';
 
+import { DEFAULT_COLOR_MODE } from '../constants/theme';
+
 const variants = {
   BACKGROUND: 'background',
   TEXT: 'text',
@@ -24,7 +26,11 @@ export default function gradientAnimation(
   size = sizes.NORMAL
 ) {
   const { theme, colorMode } = useThemeUI();
-  const colors = theme.colors.modes[colorMode];
+
+  const colors =
+    colorMode === DEFAULT_COLOR_MODE
+      ? theme.colors
+      : theme.colors.modes[colorMode];
   if (!colors) return {}; // Will not be available on server-side
 
   const color1 = colors.gradient1;
