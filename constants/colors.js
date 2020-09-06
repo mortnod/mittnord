@@ -11,12 +11,12 @@ const aurora = {
 };
 
 const daylight = {
-  background: 'white',
+  background: '#F2F6F9',
   heading: '#2d3748',
-  card: '#F0F0F0',
-  cardHover: '#E0E0E0',
-  icon: '#282828',
-  iconHover: '#0C0C0C',
+  card: 'white',
+  cardHover: 'white',
+  icon: '#14232f',
+  iconHover: '#14232f',
   danger: '#E46A5E',
   gradient1: '#7ABBFE',
   gradient2: '#93D7A5',
@@ -35,12 +35,12 @@ const dusk = {
 };
 
 const dawn = {
-  background: 'white',
+  background: '#F5F4F3',
   heading: '#2d3748',
-  card: '#F0F0F0',
-  cardHover: '#E0E0E0',
-  icon: '#282828',
-  iconHover: '#0C0C0C',
+  card: 'white',
+  cardHover: 'white',
+  icon: '#1E1410',
+  iconHover: '#1E1410',
   danger: '#E46A5E',
   gradient1: '#FF585D',
   gradient2: '#FFA300',
