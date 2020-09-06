@@ -11,6 +11,12 @@ const AspectRatioOuter = ({ children }) => (
       width: '100%',
       pb: '100%',
       boxShadow: 3,
+
+      '@media (pointer: fine)': {
+        ':active': {
+          top: '2px',
+        },
+      },
     }}
   >
     {children}
@@ -59,12 +65,6 @@ export default function Card({ heading, icon, href }) {
 
             '&.focus-visible': {
               ...gradientAnimation('background', 'large'),
-            },
-
-            '@media (pointer: fine)': {
-              ':active': {
-                top: '2px',
-              },
             },
           }}
         >
