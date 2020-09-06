@@ -2,6 +2,14 @@ import { useThemeUI } from 'theme-ui';
 
 import { DEFAULT_COLOR_MODE } from '../constants/theme';
 
+const getThemeColors = () => {
+  const { theme, colorMode } = useThemeUI();
+
+  return colorMode === DEFAULT_COLOR_MODE
+    ? theme.colors
+    : theme.colors.modes[colorMode];
+};
+
 const variants = {
   BACKGROUND: 'background',
   TEXT: 'text',
@@ -21,16 +29,11 @@ const clipToTextStyles = {
   display: 'inline-block',
 };
 
-export default function gradientAnimation(
+export function gradientAnimation(
   variant = variants.BACKGROUND,
   size = sizes.NORMAL
 ) {
-  const { theme, colorMode } = useThemeUI();
-
-  const colors =
-    colorMode === DEFAULT_COLOR_MODE
-      ? theme.colors
-      : theme.colors.modes[colorMode];
+  const colors = getThemeColors();
   if (!colors) return {}; // Will not be available on server-side
 
   const color1 = colors.gradient1;
@@ -51,4 +54,48 @@ export default function gradientAnimation(
     color: 'background',
     ...variantStyles,
   };
+}
+
+/* 
+USAGE: 
+<svg sx={{ fill: 'url(#some-id')}}>
+  <defs>{svgGradientAnimation('some-id')}</defs>
+...
+</svg>
+*/
+export function svgGradientAnimation(id) {
+  const colors = getThemeColors();
+  if (!colors) return {}; // Will not be available on server-side
+
+  const color1 = colors.gradient1;
+  const color2 = colors.gradient2;
+
+  return (
+    <linearGradient id={id} x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stopColor={color1}>
+        <animate
+          attributeName="stop-color"
+          values={`${color2};${color1};${color2}`}
+          dur="12s"
+          repeatCount="indefinite"
+        />
+      </stop>
+      <stop offset="0.5" stopColor={color2}>
+        <animate
+          attributeName="stop-color"
+          values={`${color1};${color2};${color1};${color1}`}
+          dur="7s"
+          repeatCount="indefinite"
+        />
+      </stop>
+      <stop offset="1" stopColor={color2}>
+        <animate
+          attributeName="stop-color"
+          values={`${color1};${color2};${color1}`}
+          dur="9s"
+          repeatCount="indefinite"
+        />
+      </stop>
+    </linearGradient>
+  );
 }

@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import CardHeading from './cardHeading';
-import gradientAnimation from '../../utils/gradientAnimation';
+import { gradientAnimation } from '../../utils/gradientAnimation';
 
 const AspectRatioOuter = ({ children }) => (
   <div
