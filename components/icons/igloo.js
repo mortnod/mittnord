@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const Igloo = () => (
   <svg
-    sx={{ width: ['55%', null, '65%'], fill: 'currentColor' }}
+    sx={{ width: ['55%', null, '56%'], fill: 'currentColor' }}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 576 512"
   >

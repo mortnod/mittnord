@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const GraduationCap = () => (
   <svg
-    sx={{ width: ['50%', null, '60%'], fill: 'currentColor' }}
+    sx={{ width: ['50%', null, '51%'], fill: 'currentColor' }}
     viewBox="0 0 80 80"
     xmlns="http://www.w3.org/2000/svg"
   >

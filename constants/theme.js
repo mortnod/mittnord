@@ -106,7 +106,7 @@ const letterSpacings = {
   tighter: '-0.025em',
   tight: '-0.0125em',
   normal: 'normal',
-  wide: '0.0625em',
+  wide: '0.02em',
   wider: '0.125em',
   widest: '0.25em',
 };

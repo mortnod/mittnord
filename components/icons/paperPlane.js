@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const PaperPlane = () => (
   <svg
-    sx={{ width: ['45%', null, '55%'], fill: 'currentColor' }}
+    sx={{ width: ['45%', null, '47%'], fill: 'currentColor' }}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
   >
