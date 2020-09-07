@@ -9,7 +9,8 @@ export default class extends Document {
 
   render() {
     return (
-      <Html>
+      // eslint-disable-next-line no-underscore-dangle
+      <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>

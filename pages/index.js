@@ -2,12 +2,13 @@
 import { jsx } from 'theme-ui';
 import Head from 'next/head';
 
+import { i18n, withTranslation } from '../i18n';
 import Cards from '../components/cards/cards';
 import ColorModeSelector from '../components/colorModeSelector';
 import GradientBar from '../components/gradientBar';
 import Header from '../components/header/header';
 
-export default function IndexPage() {
+function IndexPage({ t }) {
   return (
     <>
       <Head>
@@ -26,7 +27,21 @@ export default function IndexPage() {
         <Header />
         <Cards />
         <ColorModeSelector />
+        <button
+          type="button"
+          onClick={() =>
+            i18n.changeLanguage(i18n.language === 'nb' ? 'en' : 'nb')
+          }
+        >
+          {t('change-locale')}
+        </button>
       </div>
     </>
   );
 }
+
+IndexPage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(IndexPage);

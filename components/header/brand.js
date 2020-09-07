@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+
+import { withTranslation } from '../../i18n';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 
-export default function Brand() {
+function Brand({ t }) {
   return (
     <h2
       sx={{
@@ -13,9 +15,11 @@ export default function Brand() {
         lineHeight: 1,
       }}
     >
-      MITT
+      {t('my')}
       <br />
       <span sx={{ ...gradientAnimation('text') }}>NORD</span>
     </h2>
   );
 }
+
+export default withTranslation('common')(Brand);

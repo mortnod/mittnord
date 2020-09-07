@@ -23,7 +23,9 @@
   },
   "dependencies": {
     "focus-visible": "^5.1.0",
+    "i18next": "^19.7.0",
     "next": "^9.2.0",
+    "next-i18next": "^6.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "theme-ui": "^0.3.1"
