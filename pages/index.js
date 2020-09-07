@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import Head from 'next/head';
 
 import { i18n, withTranslation } from '../i18n';
 import Cards from '../components/cards/cards';
@@ -11,10 +10,6 @@ import Header from '../components/header/header';
 function IndexPage({ t }) {
   return (
     <>
-      <Head>
-        {/* Azo Sans via Adobe Fonts */}
-        <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
-      </Head>
       <GradientBar />
       <div
         sx={{

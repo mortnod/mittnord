@@ -13,6 +13,9 @@ export default class extends Document {
       <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
+
+          {/* Azo Sans via Adobe Fonts */}
+          <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
         </Head>
         <body>
           <InitializeColorMode />
