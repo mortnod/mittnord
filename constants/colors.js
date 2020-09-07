@@ -1,4 +1,4 @@
-const aurora = {
+const northernLights = {
   background: '#101419',
   heading: 'white',
   card: '#141A24',
@@ -10,7 +10,7 @@ const aurora = {
   gradient2: '#B0FDC4',
 };
 
-const daylight = {
+const twilight = {
   background: '#F2F6F9',
   heading: '#2d3748',
   card: 'white',
@@ -47,10 +47,10 @@ const dawn = {
 };
 
 const colors = {
-  ...aurora,
+  ...northernLights,
   modes: {
-    aurora,
-    daylight,
+    northernLights,
+    twilight,
     dusk,
     dawn,
   },
