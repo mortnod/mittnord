@@ -33,54 +33,58 @@ const Cards = ({ t }) => {
       }}
     >
       <Card
-        heading={t('canvas')}
+        heading={t('Canvas')}
         icon={Canvas}
         href="https://nord.instructure.com/"
       />
       <Card
-        heading={t('studentweb')}
+        heading={t('Studentweb')}
         icon={GraduationCap}
         href="https://fsweb.no/studentweb/login.jsf?inst=FSNORD"
       />
-      <Card heading="E-post" icon={PaperPlane} href="" />
-      <Card heading="Office 365" icon={Office} href="https://o365.nord.no/" />
+      <Card heading={t('Email')} icon={PaperPlane} href="" />
       <Card
-        heading={t('timetable')}
+        heading={t('Office 365')}
+        icon={Office}
+        href="https://o365.nord.no/"
+      />
+      <Card
+        heading={t('Timetable')}
         icon={Calendar}
         href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fopen%2Fri1Q7.html"
       />
       <Card
-        heading={t('bookRoom')}
+        heading={t('Book room')}
         icon={Igloo}
         href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fstudent%2Fri1Q8.html"
       />
       <Card
-        heading={t('print')}
+        heading={t('Print')}
         icon={Print}
         href="https://www.nord.no/no/Student/ithjelp/utskrift"
       />
       <Card
-        heading={t('campusMap')}
+        heading={t('Campus map')}
         icon={Map}
         href="https://use.mazemap.com/#config=nord&v=1&zlevel=1&center=13.414466,65.522958&zoom=5.9&campuses=nord&campusid=255"
       />
       <Card
-        heading={t('library')}
+        heading={t('Library')}
         icon={Books}
         href="https://www.nord.no/no/bibliotek"
       />
       <Card
-        heading={t('food')}
+        heading={t('Cafeteria')}
         icon={Cutlery}
         href="https://www.studentinord.no/kantine"
       />
       <Card
-        heading={t('itHelp')}
+        heading={t('IT help')}
         icon={LaptopMedical}
         href="https://www.nord.no/no/student/ithjelp"
       />
       <Card
-        heading={t('corona')}
+        heading={t('Corona')}
         icon={Virus}
         href="https://www.nord.no/no/aktuelt/informasjon-om-koronavirus/informasjon-til-studenter"
       />

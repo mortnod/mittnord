@@ -15,7 +15,7 @@ function Brand({ t }) {
         lineHeight: 1,
       }}
     >
-      {t('my')}
+      {t('MY')}
       <br />
       <span sx={{ ...gradientAnimation('text') }}>NORD</span>
     </h2>
