@@ -1,9 +1,10 @@
 import App from 'next/app';
 import { ThemeProvider } from 'theme-ui';
 import 'focus-visible';
-import { appWithTranslation } from '../i18n';
 
+import { appWithTranslation } from '../i18n';
 import theme from '../constants/theme';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (

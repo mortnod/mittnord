@@ -136,6 +136,10 @@ export default {
         margin: 0,
         padding: 0,
       },
+      // Sticky footer
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
     },
   },
 };
