@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div
       sx={{
-        mb: '12',
+        mb: [6, null, 12],
       }}
     >
       <Brand />
