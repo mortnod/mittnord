@@ -1,5 +1,6 @@
 const northernLights = {
   background: '#101419',
+  modalBg: '#1E2634',
   heading: 'white',
   card: '#141A24',
   cardHover: '#1E2634',
@@ -13,6 +14,7 @@ const northernLights = {
 
 const twilight = {
   background: '#F2F6F9',
+  modalBg: 'white',
   heading: '#2d3748',
   card: 'white',
   cardHover: 'white',
@@ -26,6 +28,7 @@ const twilight = {
 
 const dusk = {
   background: '#101419',
+  modalBg: '#1E2634',
   heading: 'white',
   card: '#141A24',
   cardHover: '#1E2634',
@@ -39,6 +42,7 @@ const dusk = {
 
 const dawn = {
   background: '#F5F4F3',
+  modalBg: 'white',
   heading: '#2d3748',
   card: 'white',
   cardHover: 'white',

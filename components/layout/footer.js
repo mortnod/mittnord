@@ -6,7 +6,7 @@ import ColorModeSelector from '../colorModeSelector';
 import Wrap from './wrap';
 import Nord from '../icons/nord';
 
-function Footer({ t }) {
+function Footer({ t, openSettings }) {
   return (
     <div
       sx={{
@@ -35,6 +35,9 @@ function Footer({ t }) {
               }
             >
               {t('change-locale')}
+            </button>
+            <button onClick={openSettings} type="button">
+              Change theme
             </button>
           </div>
         </div>
