@@ -1,4 +1,4 @@
-const northernLights = {
+const aurora = {
   background: '#101419',
   modalBg: '#1E2634',
   heading: 'white',
@@ -15,7 +15,7 @@ const northernLights = {
   radioCard: '#101419',
 };
 
-const twilight = {
+const artic = {
   background: '#F2F6F9',
   modalBg: 'white',
   heading: '#2d3748',
@@ -67,10 +67,10 @@ const dawn = {
 };
 
 const colors = {
-  ...northernLights,
+  ...aurora,
   modes: {
-    northernLights,
-    twilight,
+    aurora,
+    artic,
     dusk,
     dawn,
   },
