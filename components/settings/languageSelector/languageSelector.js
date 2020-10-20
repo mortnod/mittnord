@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { i18n, withTranslation } from '../../i18n';
-import RadioCard from '../radioCard/radioCard';
-import RadioCardGroup from '../radioCard/radioCardGroup';
+import { i18n, withTranslation } from '../../../i18n';
+import RadioCard from '../../radioCard/radioCard';
+import RadioCardGroup from '../../radioCard/radioCardGroup';
 
-const Language = ({ t }) => {
+const LanguageSelector = ({ t }) => {
   return (
     <RadioCardGroup legend={t('Language')}>
       <RadioCard
@@ -31,4 +31,4 @@ const Language = ({ t }) => {
   );
 };
 
-export default withTranslation('common')(Language);
+export default withTranslation('common')(LanguageSelector);

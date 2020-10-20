@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from 'theme-ui';
 
-import { withTranslation } from '../../i18n';
-import { colorModes } from '../../constants/theme';
-import RadioCard from '../radioCard/radioCard';
-import RadioCardGroup from '../radioCard/radioCardGroup';
+import { withTranslation } from '../../../i18n';
+import { colorModes } from '../../../constants/theme';
+import RadioCard from '../../radioCard/radioCard';
+import RadioCardGroup from '../../radioCard/radioCardGroup';
+import ThemePreview from './themePreview';
 
 const ThemeSelector = ({ t }) => {
   const [colorMode, setColorMode] = useColorMode();
@@ -19,7 +20,9 @@ const ThemeSelector = ({ t }) => {
           key={mode}
           checked={colorMode === mode}
           onChange={() => setColorMode(mode)}
-        />
+        >
+          <ThemePreview colorMode={mode} />
+        </RadioCard>
       ))}
     </RadioCardGroup>
   );

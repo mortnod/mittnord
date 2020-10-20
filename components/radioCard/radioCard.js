@@ -4,7 +4,15 @@ import { jsx } from 'theme-ui';
 import Checkmark from './checkmark';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 
-const RadioCard = ({ name, id, disabled, labelText, checked, onChange }) => {
+const RadioCard = ({
+  name,
+  id,
+  disabled,
+  labelText,
+  checked,
+  onChange,
+  children,
+}) => {
   return (
     <div>
       <input
@@ -38,6 +46,7 @@ const RadioCard = ({ name, id, disabled, labelText, checked, onChange }) => {
           },
         }}
       >
+        {children}
         <div
           sx={{
             p: 3,
