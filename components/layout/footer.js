@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../i18n';
-import ColorModeSelector from '../colorModeSelector';
 import Wrap from './wrap';
 import Nord from '../icons/nord';
 
@@ -27,7 +26,6 @@ function Footer({ t, openSettings }) {
             <Nord variant="solid" color="currentColor" />
           </div>
           <div>
-            <ColorModeSelector />
             <button
               type="button"
               onClick={() =>
