@@ -1,5 +1,6 @@
 import Modal from 'react-modal';
 import { useThemeUI } from 'theme-ui';
+import Language from './language';
 
 Modal.setAppElement('#__next');
 
@@ -28,7 +29,7 @@ function Settings({ isOpen, onClose }) {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} style={styles}>
-      Demo content
+      <Language />
     </Modal>
   );
 }

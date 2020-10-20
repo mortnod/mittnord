@@ -10,6 +10,9 @@ const northernLights = {
   gradient1: '#7ABBFE',
   gradient2: '#B0FDC4',
   border: '#1C2635',
+  border2: '#353F51',
+  outline: '#7ABBFE',
+  radioCard: '#101419',
 };
 
 const twilight = {
@@ -24,6 +27,9 @@ const twilight = {
   gradient1: '#7ABBFE',
   gradient2: '#93D7A5',
   border: '#D4DAE4',
+  border2: '#9EA4B0',
+  outline: '#7ABBFE',
+  radioCard: 'white',
 };
 
 const dusk = {
@@ -38,6 +44,9 @@ const dusk = {
   gradient1: '#FF585D',
   gradient2: '#FFA300',
   border: '#1C2635',
+  border2: '#353F51',
+  outline: '#7ABBFE',
+  radioCard: '#101419',
 };
 
 const dawn = {
@@ -52,6 +61,9 @@ const dawn = {
   gradient1: '#FF585D',
   gradient2: '#FFA300',
   border: '#D4DAE4',
+  border2: '#9EA4B0',
+  outline: '#7ABBFE',
+  radioCard: 'white',
 };
 
 const colors = {
