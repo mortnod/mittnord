@@ -17,12 +17,16 @@ const ThemePreview = ({ colorMode }) => {
       <div sx={{ height: '2', ...gradientAnimation({ colorMode }) }} />
       <div
         sx={{
-          p: '3',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
           gap: '2',
           borderBottom: isDarkTheme(colorMode) ? '1px solid' : 'none',
           borderBottomColor: 'border',
+          p: '3',
+
+          '.focus-visible + label &': {
+            p: '9px', // 12px padding normally - 3px extra padding added to parent div
+          },
         }}
       >
         <ExampleCard colors={colors} />
