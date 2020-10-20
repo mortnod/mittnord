@@ -17,7 +17,7 @@ function Brand({ t }) {
     >
       {t('MY')}
       <br />
-      <span sx={{ ...gradientAnimation('text') }}>NORD</span>
+      <span sx={{ ...gradientAnimation({ variant: 'text' }) }}>NORD</span>
     </h2>
   );
 }

@@ -65,7 +65,7 @@ export default function Card({ heading, icon, href }) {
             },
 
             '&.focus-visible': {
-              ...gradientAnimation('background', 'large'),
+              ...gradientAnimation({ variant: 'background', size: 'large' }),
             },
           }}
         >

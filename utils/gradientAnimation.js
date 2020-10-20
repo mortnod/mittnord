@@ -19,11 +19,12 @@ const clipToTextStyles = {
   display: 'inline-block',
 };
 
-export function gradientAnimation(
+export function gradientAnimation({
   variant = variants.BACKGROUND,
-  size = sizes.NORMAL
-) {
-  const colors = getThemeColors();
+  size = sizes.NORMAL,
+  colorMode = undefined,
+} = {}) {
+  const colors = getThemeColors(colorMode);
   if (!colors) return {}; // Will not be available on server-side
 
   const color1 = colors.gradient1;

@@ -69,7 +69,10 @@ const RadioCard = ({ name, id, disabled, labelText, checked, onChange }) => {
               fontSize: 'xs',
 
               'input:checked + label &': {
-                ...gradientAnimation('background', 'large'),
+                ...gradientAnimation({
+                  variant: 'background',
+                  size: 'large',
+                }),
                 boxShadow: 'unset',
                 border: 'none',
               },
