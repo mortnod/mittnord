@@ -115,8 +115,9 @@ const fontSizes = {
   xs: '12px',
   sm: '14px',
   md: '16px',
-  lg: '22px',
-  xl: '28px',
+  lg: '18px',
+  xl: '22px',
+  '2xl': '28px',
 };
 
 export default {

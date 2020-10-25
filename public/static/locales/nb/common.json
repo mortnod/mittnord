@@ -1,5 +1,5 @@
 {
-  "change-locale": "Norsk",
+  "change-locale": "English",
   "Language": "Språk",
   "MY": "MITT",
   "Canvas": "Canvas",
@@ -20,5 +20,6 @@
   "dawn": "Daggry",
   "dusk": "Skumring",
   "artic": "Arktis",
-  "Theme": "Tema"
+  "Theme": "Tema",
+  "Change theme": "Velg tema"
 }

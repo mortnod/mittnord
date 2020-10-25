@@ -8,7 +8,7 @@ export default function CardHeading({ children }) {
         color: 'heading',
         fontWeight: '500',
         letterSpacing: 'wide',
-        fontSize: ['5.2vw', '3.6vw', 'lg'],
+        fontSize: ['5.2vw', '3.6vw', 'xl'],
         mt: ['3vw', '1vw', 0],
         mb: ['4vw', '3vw', '4'],
 

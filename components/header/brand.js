@@ -11,7 +11,7 @@ function Brand({ t }) {
         color: 'heading',
         letterSpacing: 'wider',
         fontWeight: 'bold',
-        fontSize: ['lg', null, 'xl'],
+        fontSize: ['xl', null, '2xl'],
         lineHeight: 1,
       }}
     >

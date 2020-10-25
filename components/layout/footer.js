@@ -2,8 +2,11 @@
 import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../i18n';
-import Wrap from './wrap';
 import Nord from '../icons/nord';
+import Globe from '../icons/globe';
+import PaintRoller from '../icons/paintRoller';
+import Wrap from './wrap';
+import SettingsButton from './settingsButton';
 
 function Footer({ t, openSettings }) {
   return (
@@ -26,17 +29,18 @@ function Footer({ t, openSettings }) {
             <Nord variant="solid" color="currentColor" />
           </div>
           <div>
-            <button
-              type="button"
+            <SettingsButton
+              icon={<Globe />}
+              sx={{ mr: '5' }}
               onClick={() =>
                 i18n.changeLanguage(i18n.language === 'nb' ? 'en' : 'nb')
               }
             >
               {t('change-locale')}
-            </button>
-            <button onClick={openSettings} type="button">
-              Change theme
-            </button>
+            </SettingsButton>
+            <SettingsButton onClick={openSettings} icon={<PaintRoller />}>
+              {t('Change theme')}
+            </SettingsButton>
           </div>
         </div>
       </Wrap>
