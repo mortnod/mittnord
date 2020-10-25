@@ -19,7 +19,7 @@ const artic = {
   background: '#F2F6F9',
   modalBg: 'white',
   heading: '#2d3748',
-  muted: '#465774',
+  muted: '#72829e',
   card: 'white',
   cardHover: 'white',
   icon: '#14232f',
