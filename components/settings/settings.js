@@ -1,7 +1,10 @@
+/** @jsx jsx */
+import { jsx, useThemeUI } from 'theme-ui';
 import Modal from 'react-modal';
-import { useThemeUI } from 'theme-ui';
+
 import LanguageSelector from './languageSelector/languageSelector';
 import ThemeSelector from './themeSelector/themeSelector';
+import SettingsHeader from './settingsHeader/settingsHeader';
 
 Modal.setAppElement('#__next');
 
@@ -30,6 +33,7 @@ function Settings({ isOpen, onClose }) {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} style={styles}>
+      <SettingsHeader onClose={onClose} />
       <LanguageSelector />
       <ThemeSelector />
     </Modal>

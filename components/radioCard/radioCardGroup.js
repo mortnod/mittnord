@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 
 const RadioCardGroup = ({ legend, icon, children }) => {
   return (
-    <fieldset sx={{ border: 'none', mb: '8' }}>
+    <fieldset sx={{ border: 'none', mb: 10 }}>
       <legend
         sx={{
           display: 'flex',
