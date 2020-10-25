@@ -10,7 +10,7 @@ export default function Header({ openSettings }) {
   return (
     <div
       sx={{
-        mb: [6, null, 12],
+        mb: [4, 6, 12, null, '5.5vh'],
         display: 'flex',
         justifyContent: 'space-between',
       }}

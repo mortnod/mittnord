@@ -10,7 +10,7 @@ export default function gradientBar() {
         ...gradientAnimation(),
         width: '100%',
         height: '1',
-        mb: [4, null, 8],
+        mb: [2, 3, 8, null, '3.5vh'],
       }}
     />
   );
