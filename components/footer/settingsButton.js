@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-const settingsButton = ({ children, icon, sx, ...rest }) => (
+const settingsButton = ({ children, icon, sx, iconSx, ...rest }) => (
   <button
     type="button"
     sx={{
@@ -24,8 +24,9 @@ const settingsButton = ({ children, icon, sx, ...rest }) => (
         fontSize: '20px',
         display: 'flex',
         alignItems: 'center',
-        mr: 2,
+        mr: children ? 2 : 0,
         color: 'muted',
+        ...iconSx,
       }}
     >
       {icon}

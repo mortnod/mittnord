@@ -26,7 +26,7 @@ function IndexPage() {
       <Main>
         <GradientBar />
         <Wrap>
-          <Header />
+          <Header openSettings={openSettings} />
           <Cards />
         </Wrap>
       </Main>
