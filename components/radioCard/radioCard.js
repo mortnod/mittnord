@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 
 import Checkmark from './checkmark';
 import { gradientAnimation } from '../../utils/gradientAnimation';
+import isDarkTheme from '../../utils/isDarkTheme';
 
 const RadioCard = ({
   name,
@@ -50,7 +51,7 @@ const RadioCard = ({
         <div
           sx={{
             p: 3,
-            bg: 'radioCard',
+            bg: isDarkTheme() ? 'background' : 'modalBg',
             color: 'heading',
             fontWeight: '500',
             display: 'flex',
