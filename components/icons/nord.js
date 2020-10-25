@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-
-import { i18n } from '../../i18n';
+import { useContext } from 'react';
+import { I18nContext } from 'next-i18next';
 
 const OutlineLogo = () => (
   <g transform="translate(1)" fill="currentColor">
@@ -113,27 +113,31 @@ const UniversityEnglishText = ({ fill }) => (
   </g>
 );
 
-const Nord = ({ sx, variant, color, logoColor, textColor }) => (
-  <svg
-    width="1em"
-    height="0.366863905em" // viewbox height / viewbox width
-    viewBox="0 0 169 62"
-    xmlns="http://www.w3.org/2000/svg"
-    sx={sx}
-  >
-    <NordText fill={color || textColor} />
+const Nord = ({ sx, variant, color, logoColor, textColor }) => {
+  const { i18n } = useContext(I18nContext);
 
-    {i18n.language === 'nb' ? (
-      <UniversityNorwegianText fill={color || textColor} />
-    ) : (
-      <UniversityEnglishText fill={color || textColor} />
-    )}
+  return (
+    <svg
+      width="1em"
+      height="0.366863905em" // viewbox height / viewbox width
+      viewBox="0 0 169 62"
+      xmlns="http://www.w3.org/2000/svg"
+      sx={sx}
+    >
+      <NordText fill={color || textColor} />
 
-    {variant === 'color' && <ColorLogo />}
-    {variant === 'outline' && <OutlineLogo fill={color || logoColor} />}
-    {variant === 'solid' && <SolidLogo fill={color || logoColor} />}
-  </svg>
-);
+      {i18n.language === 'nb' ? (
+        <UniversityEnglishText fill={color || textColor} />
+      ) : (
+        <UniversityNorwegianText fill={color || textColor} />
+      )}
+
+      {variant === 'color' && <ColorLogo />}
+      {variant === 'outline' && <OutlineLogo fill={color || logoColor} />}
+      {variant === 'solid' && <SolidLogo fill={color || logoColor} />}
+    </svg>
+  );
+};
 
 Nord.defaultProps = {
   variant: 'color',
