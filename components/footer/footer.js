@@ -14,25 +14,42 @@ function Footer({ t, openSettings }) {
       sx={{
         flexShrink: 0,
         borderTop: '1px solid',
-        borderTopColor: 'border',
+        borderTopColor: ['transparent', null, 'border'],
+        mt: 10,
+        mb: [10, null, 0],
       }}
     >
       <Wrap>
         <div
           sx={{
             display: 'flex',
+            flexDirection: ['column', null, 'row'],
             justifyContent: 'space-between',
             alignItems: 'center',
           }}
         >
-          <div sx={{ fontSize: '128px', lineHeight: '0', color: 'icon' }}>
+          <div
+            sx={{
+              fontSize: '128px',
+              lineHeight: '0',
+              color: 'icon',
+              mb: [8, null, 0],
+            }}
+          >
             <Nord variant="solid" color="currentColor" />
           </div>
-          <div>
+          <div
+            sx={{
+              display: 'flex',
+              flexDirection: ['column', null, 'row'],
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
             <SettingsButton
               onClick={openSettings}
               icon={<PaintRoller />}
-              sx={{ mr: '5' }}
+              sx={{ mr: [null, null, 5], mb: [5, null, 0] }}
             >
               {t('Change theme')}
             </SettingsButton>
