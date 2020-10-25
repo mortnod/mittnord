@@ -32,7 +32,12 @@ function Settings({ isOpen, onClose }) {
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClose} style={styles}>
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      closeTimeoutMS={200}
+      style={styles}
+    >
       <SettingsHeader onClose={onClose} />
       <LanguageSelector />
       <ThemeSelector />

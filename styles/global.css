@@ -27,3 +27,33 @@ h6 {
   -webkit-font-smoothing: antialiased; /* Chrome, Safari */
   -moz-osx-font-smoothing: grayscale; /* Firefox */
 }
+
+/* Modal: Animate open/close */
+.ReactModal__Overlay,
+.ReactModal__Content {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+
+.ReactModal__Overlay--after-open,
+.ReactModal__Content--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close,
+.ReactModal__Content--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  transform: translateX(100%);
+}
+
+.ReactModal__Content--after-open {
+  transform: translateX(0);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateX(100%);
+}
