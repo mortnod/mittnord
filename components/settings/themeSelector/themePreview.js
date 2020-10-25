@@ -22,10 +22,14 @@ const ThemePreview = ({ colorMode }) => {
           gap: '2',
           borderBottom: isDarkTheme(colorMode) ? '1px solid' : 'none',
           borderBottomColor: 'border',
-          p: '3',
+          px: '3',
+          pt: '3',
+          pb: '3',
 
           '.focus-visible + label &': {
-            p: '9px', // 12px padding normally - 3px extra padding added to parent div
+            px: '9px', // 12px padding normally - 3px extra padding added to parent div
+            pt: '9px',
+            pb: '15px',
           },
         }}
       >
