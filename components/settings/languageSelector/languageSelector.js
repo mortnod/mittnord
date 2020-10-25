@@ -4,10 +4,11 @@ import { jsx } from 'theme-ui';
 import { i18n, withTranslation } from '../../../i18n';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
+import Globe from '../../icons/globe';
 
 const LanguageSelector = ({ t }) => {
   return (
-    <RadioCardGroup legend={t('Language')}>
+    <RadioCardGroup legend={t('Language')} icon={<Globe />}>
       <RadioCard
         id="language-select-en"
         name="language-select"
