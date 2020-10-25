@@ -64,6 +64,14 @@ export default function Card({ heading, icon, href }) {
               bg: 'cardHover',
             },
 
+            // Don't show hover colors on phones
+            '@media (pointer: coarse)': {
+              ':hover': {
+                color: 'icon',
+                bg: 'card',
+              },
+            },
+
             '&.focus-visible': {
               ...gradientAnimation({ variant: 'background', size: 'large' }),
             },
