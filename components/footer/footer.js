@@ -30,16 +30,19 @@ function Footer({ t, openSettings }) {
           </div>
           <div>
             <SettingsButton
-              icon={<Globe />}
+              onClick={openSettings}
+              icon={<PaintRoller />}
               sx={{ mr: '5' }}
+            >
+              {t('Change theme')}
+            </SettingsButton>
+            <SettingsButton
+              icon={<Globe />}
               onClick={() =>
                 i18n.changeLanguage(i18n.language === 'nb' ? 'en' : 'nb')
               }
             >
               {t('change-locale')}
-            </SettingsButton>
-            <SettingsButton onClick={openSettings} icon={<PaintRoller />}>
-              {t('Change theme')}
             </SettingsButton>
           </div>
         </div>
