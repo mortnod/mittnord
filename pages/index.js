@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Cards from '../components/cards/cards';
 import GradientBar from '../components/gradientBar';
 import Header from '../components/header/header';
-import Footer from '../components/layout/footer';
+import Footer from '../components/footer/footer';
 import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';

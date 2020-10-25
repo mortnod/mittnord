@@ -5,7 +5,7 @@ import { i18n, withTranslation } from '../../i18n';
 import Nord from '../icons/nord';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
-import Wrap from './wrap';
+import Wrap from '../layout/wrap';
 import SettingsButton from './settingsButton';
 
 function Footer({ t, openSettings }) {
