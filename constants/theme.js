@@ -70,6 +70,14 @@ const space = {
   '1/1': '100%',
 };
 
+// Negative spacing values
+const spaceKeys = Object.keys(space);
+spaceKeys.forEach((key) => {
+  const negativeKey = `-${key}`;
+  const negativeValue = `-${space[key]}`;
+  space[negativeKey] = negativeValue;
+});
+
 const fonts = {
   sans:
     '"azo-sans-web", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
