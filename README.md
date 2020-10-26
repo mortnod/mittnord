@@ -2,7 +2,8 @@
 
 1. Clone project
 2. Run `yarn`
-3. Run `yarn dev` to spin up a local web server
+3. Copy the `.env.local.template` to `.env.local`
+4. Run `yarn dev` to spin up a local web server
 
 ### Setting up linting
 
