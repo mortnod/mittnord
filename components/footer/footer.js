@@ -28,7 +28,8 @@ function Footer({ t, openSettings }) {
             alignItems: 'center',
           }}
         >
-          <div
+          <a
+            href="https://www.nord.no"
             sx={{
               fontSize: '128px',
               lineHeight: '0',
@@ -37,7 +38,7 @@ function Footer({ t, openSettings }) {
             }}
           >
             <Nord variant="solid" color="currentColor" />
-          </div>
+          </a>
           <div
             sx={{
               display: 'flex',
