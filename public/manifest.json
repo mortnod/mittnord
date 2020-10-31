@@ -40,7 +40,7 @@
     }
   ],
   "start_url": "./?utm_source=web_app_manifest",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#1E2634",
   "background_color": "#141A24"
