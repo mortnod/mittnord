@@ -17,6 +17,9 @@ export default class extends Document {
           <link rel="shortcut icon" href="/images/favicon.ico" />
           {/* Azo Sans via Adobe Fonts */}
           <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
+
+          {/* Progressive Web App */}
+          <link rel="manifest" href="/manifest.json" />
           <OpenGraph />
         </Head>
         <body>
