@@ -1,12 +1,16 @@
 const AppIcons = () => {
   return (
     <>
+      <meta name="application-name" content="Mitt Nord" />
+      <meta name="apple-mobile-web-app-title" content="Mitt Nord" />
+      <meta name="description" content="Startsiden for Nord-studenter" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+
       {/* iOS App icon */}
       <link rel="apple-touch-icon" sizes="180x180" href="/images/app/180.png" />
 
       {/* iOS Splash images */}
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-
       {/* <link
       rel="apple-touch-startup-image"
       media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
