@@ -2,6 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { InitializeColorMode } from 'theme-ui';
 
 import OpenGraph from '../components/meta/openGraph';
+import AppIcons from '../components/meta/appIcons';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -18,14 +19,10 @@ export default class extends Document {
           {/* Azo Sans via Adobe Fonts */}
           <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
 
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/images/app/180.png"
-          />
-
           {/* Progressive Web App */}
           <link rel="manifest" href="/manifest.json" />
+          <AppIcons />
+
           <OpenGraph />
         </Head>
         <body>
