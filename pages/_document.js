@@ -11,6 +11,8 @@ export default class extends Document {
   }
 
   render() {
+    const ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
     return (
       // eslint-disable-next-line no-underscore-dangle
       <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
@@ -24,6 +26,26 @@ export default class extends Document {
           <AppIcons />
 
           <OpenGraph />
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`}
+          />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${ANALYTICS_ID}', {
+              page_path: window.location.pathname,
+              'anonymize_ip': true,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <InitializeColorMode />
