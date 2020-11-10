@@ -67,7 +67,7 @@ const dawn = {
 };
 
 const colors = {
-  ...aurora,
+  ...artic,
   modes: {
     aurora,
     artic,
