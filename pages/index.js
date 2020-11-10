@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui';
 import { useState } from 'react';
 import Head from 'next/head';
 
-import { withTranslation } from '../i18n';
 import Cards from '../components/cards/cards';
 import GradientBar from '../components/gradientBar';
 import Header from '../components/header/header';
@@ -12,7 +11,7 @@ import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
 
-function IndexPage({ t }) {
+function IndexPage() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const openSettings = () => {
@@ -26,7 +25,7 @@ function IndexPage({ t }) {
   return (
     <>
       <Head>
-        <title>{t('My')} Nord</title>
+        <title>Mitt Nord</title>
       </Head>
       <Main>
         <GradientBar />
@@ -45,4 +44,4 @@ IndexPage.getInitialProps = async () => ({
   namespacesRequired: ['common'],
 });
 
-export default withTranslation('common')(IndexPage);
+export default IndexPage;
