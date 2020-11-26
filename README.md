@@ -35,6 +35,7 @@ Create `.vscode/settings.json` and paste the following:
   // Stylelint will handle the validation.
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "javascript.validate.enable": false
 }
 ```
