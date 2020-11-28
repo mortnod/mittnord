@@ -71,7 +71,11 @@ const Cards = ({ t }) => {
       <Card
         heading={t('Print')}
         icon={Print}
-        href="https://www.nord.no/no/Student/ithjelp/utskrift"
+        href={{
+          nb: 'https://www.nord.no/no/Student/ithjelp/utskrift',
+          en:
+            'https://www.nord.no/en/about/service-units/helpdesk/printing/Pages/default.aspx',
+        }}
         analyticsAction="Print"
       />
       <Card
@@ -83,25 +87,39 @@ const Cards = ({ t }) => {
       <Card
         heading={t('Library')}
         icon={Books}
-        href="https://www.nord.no/no/bibliotek"
+        href={{
+          nb: 'https://www.nord.no/no/bibliotek',
+          en: 'https://www.nord.no/en/library',
+        }}
         analyticsAction="Library"
       />
       <Card
         heading={t('Cafeteria')}
         icon={Cutlery}
-        href="https://www.studentinord.no/kantine"
+        href={{
+          nb: 'https://www.studentinord.no/kantine',
+          en: 'https://www.studentinord.no/food-and-beverage',
+        }}
         analyticsAction="Cafeteria"
       />
       <Card
         heading={t('IT help')}
         icon={LaptopMedical}
-        href="https://www.nord.no/no/student/ithjelp"
+        href={{
+          nb: 'https://www.nord.no/no/student/ithjelp',
+          en:
+            'https://www.nord.no/en/about/service-units/helpdesk/Pages/default.aspx',
+        }}
         analyticsAction="IT help"
       />
       <Card
         heading={t('Corona')}
         icon={Virus}
-        href="https://www.nord.no/no/aktuelt/informasjon-om-koronavirus/informasjon-til-studenter"
+        href={{
+          nb: 'www.nord.no/koronavirus',
+          en:
+            'https://www.nord.no/en/news-events/coronavirus/Pages/default.aspx',
+        }}
         analyticsAction="Corona"
       />
     </div>

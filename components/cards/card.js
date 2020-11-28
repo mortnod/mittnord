@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
+import { i18n } from '../../i18n';
 import CardHeading from './cardHeading';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
@@ -45,11 +46,27 @@ export default function Card({ heading, icon, href, analyticsAction }) {
     event({ category: 'Links', action: analyticsAction });
   };
 
+  // Supports both href provided as string or object
+  // 'https://some.link'
+  // '{ nb: '...', 'en': '...'}
+  const getHref = () => {
+    if (typeof href === 'string') {
+      console.log(href);
+      return href;
+    }
+
+    if (typeof href === 'object' && href !== null) {
+      return href[i18n.language];
+    }
+
+    throw new Error('Unsupported href provided');
+  };
+
   return (
     <AspectRatioOuter>
       <AspectRatioInner>
         <a
-          href={href}
+          href={getHref()}
           rel="noreferrer noopener"
           target="_blank"
           onClick={handleClick}
