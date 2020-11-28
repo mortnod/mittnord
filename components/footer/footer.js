@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../i18n';
+import { event } from '../../utils/gtag';
 import Nord from '../icons/nord';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
@@ -9,6 +10,16 @@ import Wrap from '../layout/wrap';
 import SettingsButton from './settingsButton';
 
 function Footer({ t, openSettings }) {
+  const handleLanguageClick = () => {
+    const newLanguage = i18n.language === 'nb' ? 'en' : 'nb';
+    i18n.changeLanguage(newLanguage);
+    event({
+      category: 'Language',
+      action: `Set language: ${newLanguage}`,
+      label: 'Via footer',
+    });
+  };
+
   return (
     <div
       sx={{
@@ -30,6 +41,11 @@ function Footer({ t, openSettings }) {
         >
           <a
             href="https://www.nord.no"
+            rel="noreferrer noopener"
+            target="_blank"
+            onClick={() =>
+              event({ category: 'Other', action: 'Go to nord.no' })
+            }
             sx={{
               fontSize: '128px',
               lineHeight: '0',
@@ -54,12 +70,7 @@ function Footer({ t, openSettings }) {
             >
               {t('Change theme')}
             </SettingsButton>
-            <SettingsButton
-              icon={<Globe />}
-              onClick={() =>
-                i18n.changeLanguage(i18n.language === 'nb' ? 'en' : 'nb')
-              }
-            >
+            <SettingsButton icon={<Globe />} onClick={handleLanguageClick}>
               {t('change-locale')}
             </SettingsButton>
           </div>

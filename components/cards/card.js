@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 
 import CardHeading from './cardHeading';
 import { gradientAnimation } from '../../utils/gradientAnimation';
+import { event } from '../../utils/gtag';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -37,14 +38,21 @@ const AspectRatioInner = ({ children }) => (
   </div>
 );
 
-export default function Card({ heading, icon, href }) {
+export default function Card({ heading, icon, href, analyticsAction }) {
   const Icon = icon;
+
+  const handleClick = () => {
+    event({ category: 'Links', action: analyticsAction });
+  };
 
   return (
     <AspectRatioOuter>
       <AspectRatioInner>
         <a
           href={href}
+          rel="noreferrer noopener"
+          target="_blank"
+          onClick={handleClick}
           sx={{
             width: '100%',
             height: '100%',

@@ -2,11 +2,21 @@
 import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../../i18n';
+import { event } from '../../../utils/gtag';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
 import Globe from '../../icons/globe';
 
 const LanguageSelector = ({ t }) => {
+  const handleChange = (language) => {
+    event({
+      category: 'Language',
+      action: `Set language: ${language}`,
+      label: 'Via settings',
+    });
+    i18n.changeLanguage(language);
+  };
+
   return (
     <RadioCardGroup legend={t('Language')} icon={<Globe />}>
       <RadioCard
@@ -14,9 +24,7 @@ const LanguageSelector = ({ t }) => {
         name="language-select"
         labelText="English"
         checked={i18n.language === 'en'}
-        onChange={() => {
-          i18n.changeLanguage('en');
-        }}
+        onChange={() => handleChange('en')}
       />
 
       <RadioCard
@@ -24,9 +32,7 @@ const LanguageSelector = ({ t }) => {
         name="language-select"
         labelText="Norsk"
         checked={i18n.language === 'nb'}
-        onChange={() => {
-          i18n.changeLanguage('nb');
-        }}
+        onChange={() => handleChange('nb')}
       />
     </RadioCardGroup>
   );
