@@ -83,6 +83,7 @@ export default function Card({ heading, icon, href, analyticsAction }) {
             color: 'icon',
             outline: 'none',
             position: 'relative',
+            textAlign: 'center',
 
             ':hover': {
               color: 'iconHover',

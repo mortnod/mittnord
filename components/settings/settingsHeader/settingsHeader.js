@@ -4,6 +4,7 @@ import { jsx } from 'theme-ui';
 import { withTranslation } from '../../../i18n';
 import Times from '../../icons/times';
 import SettingsButton from '../../footer/settingsButton';
+import isDarkTheme from '../../../utils/isDarkTheme';
 
 const SettingsHeader = ({ onClose, t }) => {
   return (
@@ -12,7 +13,7 @@ const SettingsHeader = ({ onClose, t }) => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        bg: 'rgba(0,0,0,0.15)',
+        bg: isDarkTheme() ? 'rgba(0,0,0,0.15)' : 'background',
         m: '-5',
         mb: 8,
         px: 5,
