@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { i18n } from '../../i18n';
 import CardHeading from './cardHeading';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
+import { useLanguage } from '../../utils/languageContext';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -40,6 +40,7 @@ const AspectRatioInner = ({ children }) => (
 );
 
 export default function Card({ heading, icon, href, analyticsAction }) {
+  const language = useLanguage();
   const Icon = icon;
 
   const handleClick = () => {
@@ -51,15 +52,16 @@ export default function Card({ heading, icon, href, analyticsAction }) {
   // '{ nb: '...', 'en': '...'}
   const getHref = () => {
     if (typeof href === 'string') {
-      console.log(href);
       return href;
     }
 
     if (typeof href === 'object' && href !== null) {
-      return href[i18n.language];
+      return href[language];
     }
 
-    throw new Error('Unsupported href provided');
+    throw new Error(
+      '[Card] Unsupported href prop provided. Must be either a string or object'
+    );
   };
 
   return (
