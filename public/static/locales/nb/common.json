@@ -21,5 +21,7 @@
   "artic": "Arktis",
   "Theme": "Tema",
   "Change theme": "Velg tema",
-  "Settings": "Innstillinger"
+  "Settings": "Innstillinger",
+  "alert-content": "Viktig informasjon om studiestart 2021",
+  "alert-href": "https://nord.no"
 }

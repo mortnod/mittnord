@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import { useState } from 'react';
 import Head from 'next/head';
 
+import { withTranslation } from '../i18n';
 import { event } from '../utils/gtag';
 import { LanguageContext } from '../utils/languageContext';
 import getInitialLanguage from '../utils/getInitialLanguage';
@@ -13,8 +14,9 @@ import Footer from '../components/footer/footer';
 import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
+import Alert from '../components/alert/alert';
 
-function IndexPage({ language }) {
+function IndexPage({ language, t }) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const openSettings = (elementLocation) => {
@@ -39,6 +41,13 @@ function IndexPage({ language }) {
         <GradientBar />
         <Wrap>
           <Header openSettings={() => openSettings('header')} />
+          <Alert
+            href={t('alert-href')}
+            startAt={new Date('2021-02-01')}
+            endAt={new Date('2022-02-01')}
+          >
+            {t('alert-content')}
+          </Alert>
           <Cards />
         </Wrap>
       </Main>
@@ -57,4 +66,4 @@ IndexPage.getInitialProps = async ({ req, res }) => {
   };
 };
 
-export default IndexPage;
+export default withTranslation('common')(IndexPage);

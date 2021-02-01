@@ -21,5 +21,7 @@
   "artic": "Artic",
   "Theme": "Theme",
   "Change theme": "Change theme",
-  "Settings": "Settings"
+  "Settings": "Settings",
+  "alert-content": "Important information about semester start 2021",
+  "alert-href": "https://nord.edu"
 }
