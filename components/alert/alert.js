@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import useStickyState from '../../utils/useStickyState';
+import CloseButton from './closeButton';
 
 const shouldHideAlert = (startAt, endAt, closedAt) => {
   const now = new Date().getTime();
@@ -27,7 +28,8 @@ export default function Alert({ children, href, startAt, endAt }) {
     <a
       href={href}
       sx={{
-        display: 'block',
+        display: 'flex',
+        justifyContent: 'space-between',
         width: '100%',
         color: 'icon',
         textDecoration: 'none',
@@ -35,20 +37,18 @@ export default function Alert({ children, href, startAt, endAt }) {
         borderStyle: 'solid',
         borderColor: 'border',
         borderRadius: 'full',
-        py: '4',
-        px: '6',
+        py: '2',
+        pr: '3',
+        pl: '6',
       }}
     >
-      {children}
-      <button
-        type="button"
+      <div sx={{ display: 'flex', alignItems: 'center' }}>{children}</div>
+      <CloseButton
         onClick={(e) => {
           e.preventDefault();
           setClosedAt(new Date().toISOString());
         }}
-      >
-        close
-      </button>
+      />
     </a>
   );
 }
