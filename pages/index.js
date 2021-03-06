@@ -15,6 +15,7 @@ import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
 import Alert from '../components/alert/alert';
+import ClientOnly from '../components/clientOnly/clientOnly';
 
 function IndexPage({ language, t }) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -41,13 +42,15 @@ function IndexPage({ language, t }) {
         <GradientBar />
         <Wrap>
           <Header openSettings={() => openSettings('header')} />
-          <Alert
-            href={t('alert-href')}
-            startAt={new Date('2021-02-01')}
-            endAt={new Date('2022-02-01')}
-          >
-            {t('alert-content')}
-          </Alert>
+          <ClientOnly>
+            <Alert
+              href={t('alert-href')}
+              startAt={new Date('2021-03-06')}
+              endAt={new Date('2022-02-01')}
+            >
+              {t('alert-content')}
+            </Alert>
+          </ClientOnly>
           <Cards />
         </Wrap>
       </Main>

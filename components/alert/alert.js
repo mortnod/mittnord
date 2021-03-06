@@ -1,14 +1,25 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import useStickyState from '../../utils/useStickyState';
+
+const shouldHideAlert = (startAt, endAt, closedAt) => {
+  const now = new Date().getTime();
+  return startAt > now || endAt < now || closedAt > startAt;
+};
 
 export default function Alert({ children, href, startAt, endAt }) {
-  const now = new Date();
+  const [closedAt, setClosedAt] = useStickyState(
+    '1989-02-04',
+    'alert-closed-at'
+  );
 
-  if (startAt.getTime() > now.getTime()) {
-    return null;
-  }
-
-  if (endAt.getTime() < now.getTime()) {
+  if (
+    shouldHideAlert(
+      startAt.getTime(),
+      endAt.getTime(),
+      new Date(closedAt).getTime()
+    )
+  ) {
     return null;
   }
 
@@ -29,6 +40,15 @@ export default function Alert({ children, href, startAt, endAt }) {
       }}
     >
       {children}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          setClosedAt(new Date().toISOString());
+        }}
+      >
+        close
+      </button>
     </a>
   );
 }
