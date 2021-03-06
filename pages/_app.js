@@ -7,7 +7,8 @@ import 'focus-visible';
 import { appWithTranslation } from '../i18n';
 import theme from '../constants/theme';
 import * as gtag from '../utils/gtag';
-import '../styles/global.css';
+
+import GlobalStyles from './globalStyles';
 
 function MyApp({ Component, pageProps }) {
   // Start Google Analytics
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>
   );
