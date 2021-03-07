@@ -12,6 +12,7 @@ const CurrentAlert = ({ t }) => {
         href={t('alert-href')}
         startAt={new Date('2021-03-06')}
         endAt={new Date('2022-02-01')}
+        important
       >
         {t('alert-content')}
       </Alert>
