@@ -12,6 +12,7 @@ function Brand() {
         fontWeight: 'bold',
         fontSize: ['xl', null, '2xl'],
         lineHeight: 1,
+        mr: 6,
       }}
     >
       MITT

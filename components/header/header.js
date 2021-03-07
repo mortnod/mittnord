@@ -6,6 +6,7 @@ import SettingsButton from '../footer/settingsButton';
 
 import Brand from './brand';
 import CurrentAlert from './currentAlert';
+import Search from './search';
 
 function Header({ openSettings }) {
   return (
@@ -14,7 +15,6 @@ function Header({ openSettings }) {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
           pb: [2, 3, 4, null, '5.5vh'],
         }}
       >
@@ -23,11 +23,13 @@ function Header({ openSettings }) {
           sx={{
             display: ['none', null, null, null, 'block'],
             width: '100%',
-            ml: 6,
+            mr: 6,
+            ml: 2,
           }}
         >
           <CurrentAlert />
         </div>
+        <Search />
         <SettingsButton
           icon={<Bars />}
           onClick={openSettings}

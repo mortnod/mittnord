@@ -8,6 +8,7 @@ const settingsButton = ({ children, icon, iconSx, ...rest }) => (
       border: 'none',
       bg: 'transparent',
       p: 0,
+      ml: 6,
       fontFamily: 'sans',
       fontWeight: '500',
       fontSize: 'lg',
