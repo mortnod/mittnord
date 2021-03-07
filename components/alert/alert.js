@@ -44,9 +44,14 @@ export default function Alert({ children, href, startAt, endAt, important }) {
         py: '1',
         pr: '1',
         pl: '6',
+        outline: 'none',
 
         ':hover': {
           bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
+        },
+
+        ':focus': {
+          boxShadow: 'outline',
         },
       }}
     >

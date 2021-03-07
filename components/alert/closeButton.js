@@ -18,9 +18,14 @@ const CloseButton = ({ onClick }) => {
         transition: 'all 200ms escape',
         cursor: 'pointer',
         ml: 'auto',
+        outline: 'none',
 
         ':hover': {
           bg: isDarkTheme() ? 'background' : 'rgba(0,0,0,0.05)',
+        },
+
+        ':focus': {
+          boxShadow: 'outline',
         },
       }}
     >
