@@ -5,6 +5,7 @@ import CardHeading from './cardHeading';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
 import { useLanguage } from '../../utils/languageContext';
+import isDarkTheme from '../../utils/isDarkTheme';
 
 const AspectRatioOuter = ({ children }) => (
   <div
@@ -12,7 +13,7 @@ const AspectRatioOuter = ({ children }) => (
       position: 'relative',
       width: '100%',
       pb: '100%',
-      boxShadow: 3,
+      boxShadow: isDarkTheme() ? 'dark' : 3,
 
       '@media (pointer: fine)': {
         ':active': {

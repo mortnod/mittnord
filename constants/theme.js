@@ -89,6 +89,7 @@ const shadows = {
   1: '0 0 0 1px rgba(0, 0, 0, 0.05)',
   2: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
   3: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.15)',
+  dark: '0 1px 2px rgba(0,0,0,0.5)',
   4: '0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0px rgba(0, 0, 0, 0.1)',
   5: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
   6: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',

@@ -1,5 +1,5 @@
 const aurora = {
-  background: '#101419',
+  background: '#0D1115',
   modalBg: '#1E2634',
   heading: 'white',
   muted: '#536380',
@@ -33,7 +33,7 @@ const artic = {
 };
 
 const dusk = {
-  background: '#101419',
+  background: '#0D1115',
   modalBg: '#1E2634',
   heading: 'white',
   muted: '#536380',
