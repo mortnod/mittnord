@@ -14,7 +14,7 @@ const CloseButton = ({ onClick }) => {
         display: 'flex',
         alignItems: 'center',
         color: 'icon',
-        padding: 2,
+        padding: 3,
         transition: 'all 200ms escape',
         cursor: 'pointer',
 

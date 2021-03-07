@@ -30,15 +30,18 @@ export default function Alert({ children, href, startAt, endAt }) {
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
+        flexGrow: 1,
         width: '100%',
+        height: 'min-content',
         color: 'icon',
         textDecoration: 'none',
         borderWidth: '1px',
         borderStyle: 'solid',
         borderColor: 'border',
         borderRadius: 'full',
-        py: '2',
-        pr: '3',
+        fontSize: ['sm', null, 'md'],
+        py: '1',
+        pr: '1',
         pl: '6',
       }}
     >

@@ -14,10 +14,8 @@ import Footer from '../components/footer/footer';
 import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
-import Alert from '../components/alert/alert';
-import ClientOnly from '../components/clientOnly/clientOnly';
 
-function IndexPage({ language, t }) {
+function IndexPage({ language }) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const openSettings = (elementLocation) => {
@@ -42,15 +40,6 @@ function IndexPage({ language, t }) {
         <GradientBar />
         <Wrap>
           <Header openSettings={() => openSettings('header')} />
-          <ClientOnly>
-            <Alert
-              href={t('alert-href')}
-              startAt={new Date('2021-03-06')}
-              endAt={new Date('2022-02-01')}
-            >
-              {t('alert-content')}
-            </Alert>
-          </ClientOnly>
           <Cards />
         </Wrap>
       </Main>
