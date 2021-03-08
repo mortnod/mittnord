@@ -2,8 +2,9 @@
 import { jsx } from 'theme-ui';
 import useStickyState from '../../utils/useStickyState';
 import Dot from './dot';
-import CloseButton from './closeButton';
 import isDarkTheme from '../../utils/isDarkTheme';
+import Cross from '../icons/cross';
+import IconButton from '../iconButton/iconButton';
 
 const shouldHideAlert = (startAt, endAt, closedAt) => {
   const now = new Date().getTime();
@@ -57,10 +58,20 @@ export default function Alert({ children, href, startAt, endAt, important }) {
     >
       {important && <Dot />}
       <div sx={{ display: 'flex', alignItems: 'center' }}>{children}</div>
-      <CloseButton
+      <IconButton
+        icon={<Cross />}
         onClick={(e) => {
           e.preventDefault();
           setClosedAt(new Date().toISOString());
+        }}
+        styles={{
+          ml: 'auto',
+          ':hover': {
+            bg: isDarkTheme() ? 'background' : 'rgba(0,0,0,0.05)',
+          },
+        }}
+        iconStyles={{
+          fontSize: 'sm',
         }}
       />
     </a>
