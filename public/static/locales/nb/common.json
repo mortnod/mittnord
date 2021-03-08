@@ -24,6 +24,9 @@
   "Settings": "Innstillinger",
   "Search": "Søk",
   "search-href": "https://www.nord.no/no/Sok/Sider/results.aspx?k=",
+  "nord-href": "https://www.nord.no/no",
+  "Privacy": "Personvern",
+  "privacy-href": "https://www.nord.no/no/om-oss/personvern/",
   "alert-content": "Bruk av munnbind på campus og i undervisningssituasjoner",
   "alert-href": "https://www.nord.no/no/aktuelt/informasjon-om-koronavirus/Sider/Bruk-av-munnbind-pa-campus-og-i-undervisningssituasjoner.aspx"
 }

@@ -6,8 +6,13 @@ import { event } from '../../utils/gtag';
 import Nord from '../icons/nord';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
+import Facebook from '../icons/facebook';
+import Instagram from '../icons/instagram';
+import Twitter from '../icons/twitter';
 import Wrap from '../layout/wrap';
+
 import SettingsButton from './settingsButton';
+import Social from './social';
 
 function Footer({ t, openSettings }) {
   const handleLanguageClick = () => {
@@ -25,7 +30,7 @@ function Footer({ t, openSettings }) {
       sx={{
         flexShrink: 0,
         borderTop: '1px solid',
-        borderTopColor: ['transparent', null, 'border'],
+        borderTopColor: ['transparent', null, null, 'border'],
         mt: 10,
         mb: [10, null, 0],
       }}
@@ -34,31 +39,66 @@ function Footer({ t, openSettings }) {
         <div
           sx={{
             display: 'flex',
-            flexDirection: ['column', null, 'row'],
+            flexDirection: ['column', null, null, 'row'],
             justifyContent: 'space-between',
             alignItems: 'center',
           }}
         >
-          <a
-            href="https://www.nord.no"
-            rel="noreferrer noopener"
-            target="_blank"
-            onClick={() =>
-              event({ category: 'Other', action: 'Go to nord.no' })
-            }
-            sx={{
-              fontSize: '128px',
-              lineHeight: '0',
-              color: 'icon',
-              mb: [8, null, 0],
-            }}
-          >
-            <Nord variant="solid" color="currentColor" />
-          </a>
           <div
             sx={{
               display: 'flex',
-              flexDirection: ['column', null, 'row'],
+              alignItems: 'center',
+              flexDirection: ['column', null, null, 'row'],
+            }}
+          >
+            <a
+              href={t('nord-href')}
+              rel="noreferrer noopener"
+              target="_blank"
+              onClick={() =>
+                event({ category: 'Other', action: 'Go to nord.no' })
+              }
+              sx={{
+                fontSize: '128px',
+                lineHeight: '0',
+                color: 'icon',
+                mb: [8, null, null, 0],
+              }}
+            >
+              <Nord variant="solid" color="currentColor" />
+            </a>
+            <div sx={{ ml: [0, null, null, 10], mb: [8, null, null, 0] }}>
+              <Social
+                href="https://www.facebook.com/Norduniversitet"
+                styles={{ ml: [0, null, null, 3] }}
+              >
+                <Facebook />
+              </Social>
+              <Social href="https://twitter.com/Norduniversitet">
+                <Twitter />
+              </Social>
+              <Social href="http://instagram.com/Norduniversitet">
+                <Instagram />
+              </Social>
+            </div>
+            <a
+              href={t('privacy-href')}
+              sx={{
+                color: 'icon',
+                fontSize: 'lg',
+                textDecoration: 'none',
+                fontWeight: '500',
+                ml: [0, null, null, 10],
+                mb: [5, null, null, 0],
+              }}
+            >
+              {t('Privacy')}
+            </a>
+          </div>
+          <div
+            sx={{
+              display: 'flex',
+              flexDirection: ['column', null, null, 'row'],
               justifyContent: 'space-between',
               alignItems: 'center',
             }}
@@ -66,11 +106,19 @@ function Footer({ t, openSettings }) {
             <SettingsButton
               onClick={openSettings}
               icon={<PaintRoller />}
-              sx={{ mr: [null, null, 5], mb: [5, null, 0] }}
+              sx={{
+                mr: [null, null, null, 5],
+                mb: [5, null, null, 0],
+                ml: [0, null, null, 6],
+              }}
             >
               {t('Change theme')}
             </SettingsButton>
-            <SettingsButton icon={<Globe />} onClick={handleLanguageClick}>
+            <SettingsButton
+              icon={<Globe />}
+              onClick={handleLanguageClick}
+              sx={{ ml: [0, null, null, 6], mb: [6, null, null, 0] }}
+            >
               {t('change-locale')}
             </SettingsButton>
           </div>
