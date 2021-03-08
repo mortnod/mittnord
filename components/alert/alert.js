@@ -66,6 +66,8 @@ export default function Alert({ children, href, startAt, endAt, important }) {
         }}
         styles={{
           ml: 'auto',
+          width: '34px',
+          height: '34px',
           ':hover': {
             bg: isDarkTheme() ? 'background' : 'rgba(0,0,0,0.05)',
           },
