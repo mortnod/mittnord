@@ -4,13 +4,15 @@ import { jsx } from 'theme-ui';
 
 import { withTranslation } from '../../i18n';
 import isDarkTheme from '../../utils/isDarkTheme';
+import Search from '../icons/search';
+import IconButton from '../iconButton/iconButton';
 
-function Search({ t }) {
+function SearchField({ t }) {
   const searchInput = useRef(null);
 
   return (
     <form
-      sx={{ ml: [0, 'auto'], width: ['100%', 'auto'] }}
+      sx={{ ml: [0, 'auto'], width: ['100%', 'auto'], position: 'relative' }}
       onSubmit={(e) => {
         e.preventDefault();
         window.open(t('search-href') + searchInput.current.value);
@@ -43,8 +45,23 @@ function Search({ t }) {
           },
         }}
       />
+      <IconButton
+        icon={<Search />}
+        type="submit"
+        styles={{
+          position: 'absolute',
+          top: '50%',
+          right: 1,
+          ml: 6,
+          mt: '-18px',
+
+          ':hover': {
+            bg: 'background',
+          },
+        }}
+      />
     </form>
   );
 }
 
-export default withTranslation('common')(Search);
+export default withTranslation('common')(SearchField);

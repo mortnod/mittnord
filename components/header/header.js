@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Bars from '../icons/bars';
-import SettingsButton from '../footer/settingsButton';
+import Cog from '../icons/cog';
 
 import Brand from './brand';
 import CurrentAlert from './currentAlert';
-import Search from './search';
+import SearchField from './searchField';
+import IconButton from '../iconButton/iconButton';
 
 function Header({ openSettings }) {
   return (
@@ -29,13 +29,18 @@ function Header({ openSettings }) {
         >
           <CurrentAlert />
         </div>
-        <Search />
-        <SettingsButton
-          icon={<Bars />}
+        <SearchField />
+        <IconButton
+          icon={<Cog />}
           onClick={openSettings}
-          iconSx={{ fontSize: '2xl' }}
-          sx={{
-            display: ['inline-flex', null, 'none'],
+          styles={{
+            display: ['flex', null, 'none'],
+            ml: '3',
+            width: '40px',
+            height: '40px',
+          }}
+          iconStyles={{
+            fontSize: 'lg',
           }}
         />
       </div>
