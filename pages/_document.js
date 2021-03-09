@@ -18,8 +18,29 @@ export default class extends Document {
       <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
           <link rel="shortcut icon" href="/images/favicon.ico" />
-          {/* Azo Sans via Adobe Fonts */}
-          <link rel="stylesheet" href="https://use.typekit.net/gie0gbo.css" />
+
+          {/* Azo Sans */}
+          <link
+            rel="preload"
+            href="/fonts/azo-sans-400.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/azo-sans-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/azo-sans-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
 
           {/* Progressive Web App */}
           <link rel="manifest" href="/manifest.json" />

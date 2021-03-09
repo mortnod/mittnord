@@ -3,7 +3,27 @@ import React from 'react';
 const GlobalStyles = () => {
   return (
     <style jsx global>{`
-      /* Other global styles such as 'html, body' etc... */
+      @font-face {
+        font-family: 'Azo Sans';
+        font-style: normal;
+        font-display: optional;
+        font-weight: 400;
+        src: url('/fonts/azo-sans-400.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Azo Sans';
+        font-style: normal;
+        font-display: optional;
+        font-weight: 500;
+        src: url('/fonts/azo-sans-500.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Azo Sans';
+        font-style: normal;
+        font-display: optional;
+        font-weight: 700;
+        src: url('/fonts/azo-sans-700.woff2') format('woff2');
+      }
 
       html,
       body,
