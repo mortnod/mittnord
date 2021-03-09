@@ -126,7 +126,7 @@ const Nord = ({ sx, variant, color, logoColor, textColor }) => {
     >
       <NordText fill={color || textColor} />
 
-      {i18n.language === 'nb' ? (
+      {i18n.language === 'en' ? (
         <UniversityEnglishText fill={color || textColor} />
       ) : (
         <UniversityNorwegianText fill={color || textColor} />
