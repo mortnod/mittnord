@@ -23,8 +23,9 @@ function SearchField({ t }) {
         ref={searchInput}
         sx={{
           width: ['100%', 64],
+          height: ['42px', null, '44px'],
           fontFamily: 'sans',
-          fontSize: ['sm', null, 'md'],
+          fontSize: 'md',
           borderRadius: 'full',
           px: 4,
           py: 3,
