@@ -22,6 +22,7 @@ function SearchField({ t }) {
         placeholder={t('Search')}
         ref={searchInput}
         sx={{
+          WebkitAppearance: 'none',
           width: ['100%', 64],
           height: ['42px', null, '44px'],
           fontFamily: 'sans',
