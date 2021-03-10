@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
+import isDarkTheme from '../../utils/isDarkTheme';
+
 const settingsButton = ({ children, icon, iconSx, ...rest }) => (
   <button
     type="button"
     sx={{
       border: 'none',
       bg: 'transparent',
-      p: 0,
-      ml: 6,
       fontFamily: 'sans',
       fontWeight: '500',
       fontSize: 'lg',
@@ -16,6 +16,19 @@ const settingsButton = ({ children, icon, iconSx, ...rest }) => (
       cursor: 'pointer',
       display: 'inline-flex',
       alignItems: 'center',
+      outline: 'none',
+      borderRadius: 'full',
+      px: 4,
+      py: 2,
+
+      ':focus': {
+        boxShadow: 'outline',
+      },
+
+      ':hover': {
+        color: 'iconHover',
+        bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
+      },
     }}
     {...rest}
   >

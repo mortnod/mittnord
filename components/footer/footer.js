@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../i18n';
 import { event } from '../../utils/gtag';
+import isDarkTheme from '../../utils/isDarkTheme';
 import Nord from '../icons/nord';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
@@ -63,11 +64,27 @@ function Footer({ t, openSettings }) {
                 lineHeight: '0',
                 color: 'icon',
                 mb: [8, null, null, 0],
+                outline: 'none',
+                borderRadius: 2,
+
+                ':focus': {
+                  boxShadow: 'outline',
+                },
+
+                ':hover': {
+                  color: 'iconHover',
+                },
               }}
             >
               <Nord variant="solid" color="currentColor" />
             </a>
-            <div sx={{ ml: [0, null, null, 10], mb: [8, null, null, 0] }}>
+            <div
+              sx={{
+                ml: [0, null, null, 10],
+                mb: [8, null, null, 0],
+                display: 'flex',
+              }}
+            >
               <Social
                 href="https://www.facebook.com/Norduniversitet"
                 styles={{ ml: [0, null, null, 3] }}
@@ -88,8 +105,21 @@ function Footer({ t, openSettings }) {
                 fontSize: 'lg',
                 textDecoration: 'none',
                 fontWeight: '500',
-                ml: [0, null, null, 10],
+                ml: [0, null, null, 6],
                 mb: [5, null, null, 0],
+                outline: 'none',
+                borderRadius: 'full',
+                px: 4,
+                py: 2,
+
+                ':focus': {
+                  boxShadow: 'outline',
+                },
+
+                ':hover': {
+                  color: 'iconHover',
+                  bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
+                },
               }}
             >
               {t('Privacy')}
@@ -107,9 +137,9 @@ function Footer({ t, openSettings }) {
               onClick={openSettings}
               icon={<PaintRoller />}
               sx={{
-                mr: [null, null, null, 5],
+                mr: [null, null, null, 1],
                 mb: [5, null, null, 0],
-                ml: [0, null, null, 6],
+                ml: [0, null, null, 2],
               }}
             >
               {t('Change theme')}
@@ -117,7 +147,7 @@ function Footer({ t, openSettings }) {
             <SettingsButton
               icon={<Globe />}
               onClick={handleLanguageClick}
-              sx={{ ml: [0, null, null, 6], mb: [6, null, null, 0] }}
+              sx={{ ml: [0, null, null, 2], mb: [6, null, null, 0] }}
             >
               {t('change-locale')}
             </SettingsButton>

@@ -3,8 +3,8 @@ import { jsx } from 'theme-ui';
 
 import { withTranslation } from '../../../i18n';
 import Times from '../../icons/times';
-import SettingsButton from '../../footer/settingsButton';
 import isDarkTheme from '../../../utils/isDarkTheme';
+import IconButton from '../../iconButton/iconButton';
 
 const SettingsHeader = ({ onClose, t }) => {
   return (
@@ -17,7 +17,7 @@ const SettingsHeader = ({ onClose, t }) => {
         m: '-5',
         mb: 8,
         px: 5,
-        py: 3,
+        py: 1,
       }}
     >
       <div
@@ -30,7 +30,23 @@ const SettingsHeader = ({ onClose, t }) => {
       >
         {t('Settings')}
       </div>
-      <SettingsButton onClick={onClose} icon={<Times />} />
+      <IconButton
+        onClick={onClose}
+        icon={<Times />}
+        styles={{
+          p: 1,
+          ':hover': {
+            bg: isDarkTheme() ? 'background' : 'rgba(0,0,0,0.05)',
+          },
+
+          ':hover div': {
+            color: 'iconHover',
+          },
+        }}
+        iconStyles={{
+          fontSize: 'lg',
+        }}
+      />
     </div>
   );
 };

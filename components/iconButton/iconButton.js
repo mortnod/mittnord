@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import isDarkTheme from '../../utils/isDarkTheme';
 
 const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
   <button
@@ -40,7 +39,7 @@ const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
         display: 'flex',
         alignItems: 'center',
         mr: children ? 2 : 0,
-        color: isDarkTheme() ? 'icon' : 'muted',
+
         ...iconStyles,
       }}
     >

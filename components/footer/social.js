@@ -6,10 +6,22 @@ const Social = ({ children, href, styles }) => (
     href={href}
     sx={{
       fontSize: '28px',
+      display: 'flex',
       ml: '3',
       color: 'icon',
       lineHeight: 1,
       mt: 1,
+      outline: 'none',
+      borderRadius: 1,
+
+      ':focus': {
+        boxShadow: 'outline',
+      },
+
+      ':hover': {
+        color: 'iconHover',
+      },
+
       ...styles,
     }}
   >

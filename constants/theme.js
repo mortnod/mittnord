@@ -95,7 +95,7 @@ const shadows = {
   6: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
   7: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
   inner: 'inset 0 1px 3px 0 rgba(0, 0, 0, 0.2)',
-  outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+  outline: '0 0 0 3px rgba(66, 153, 225, 0.8)',
 };
 
 const radii = {
