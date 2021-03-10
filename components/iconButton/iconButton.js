@@ -8,7 +8,6 @@ const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
     sx={{
       border: 'none',
       bg: 'transparent',
-      p: 3,
       fontFamily: 'sans',
       fontWeight: '500',
       fontSize: 'lg',
