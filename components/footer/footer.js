@@ -67,7 +67,7 @@ function Footer({ t, openSettings }) {
                 outline: 'none',
                 borderRadius: 2,
 
-                ':focus': {
+                '&.focus-visible': {
                   boxShadow: 'outline',
                 },
 
@@ -119,7 +119,7 @@ function Footer({ t, openSettings }) {
                 px: 4,
                 py: 2,
 
-                ':focus': {
+                '&.focus-visible': {
                   boxShadow: 'outline',
                 },
 

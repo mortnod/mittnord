@@ -21,7 +21,7 @@ const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
       width: '36px',
       height: '36px',
 
-      ':focus': {
+      '&.focus-visible': {
         boxShadow: 'outline',
       },
 

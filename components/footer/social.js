@@ -15,7 +15,7 @@ const Social = ({ children, href, styles, icon }) => (
       outline: 'none',
       borderRadius: 1,
 
-      ':focus': {
+      '&.focus-visible': {
         boxShadow: 'outline',
       },
 

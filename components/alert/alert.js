@@ -52,7 +52,7 @@ function Alert({ children, href, startAt, endAt, important, t }) {
           bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
         },
 
-        ':focus': {
+        '&.focus-visible': {
           boxShadow: 'outline',
         },
       }}

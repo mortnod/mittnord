@@ -37,7 +37,7 @@ function SearchField({ t }) {
           bg: isDarkTheme() ? 'border' : 'card',
           outline: 0,
 
-          ':focus': {
+          '&.focus-visible': {
             boxShadow: 'outline',
           },
 

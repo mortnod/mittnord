@@ -21,7 +21,7 @@ const settingsButton = ({ children, icon, iconSx, ...rest }) => (
       px: 4,
       py: 2,
 
-      ':focus': {
+      '&.focus-visible': {
         boxShadow: 'outline',
       },
 
