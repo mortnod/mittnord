@@ -46,7 +46,9 @@ const SettingsHeader = ({ onClose, t }) => {
         iconStyles={{
           fontSize: 'lg',
         }}
-      />
+      >
+        {t('Close')}
+      </IconButton>
     </div>
   );
 };

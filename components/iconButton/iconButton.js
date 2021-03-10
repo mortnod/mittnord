@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
 const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
   <button
@@ -33,19 +34,18 @@ const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
     }}
     {...rest}
   >
+    <ScreenReaderOnly>{children}</ScreenReaderOnly>
     <div
       sx={{
         fontSize: 'md',
         display: 'flex',
         alignItems: 'center',
-        mr: children ? 2 : 0,
 
         ...iconStyles,
       }}
     >
       {icon}
     </div>
-    {children}
   </button>
 );
 

@@ -88,14 +88,21 @@ function Footer({ t, openSettings }) {
               <Social
                 href="https://www.facebook.com/Norduniversitet"
                 styles={{ ml: [0, null, null, 3] }}
+                icon={<Facebook />}
               >
-                <Facebook />
+                Facebook
               </Social>
-              <Social href="https://twitter.com/Norduniversitet">
-                <Twitter />
+              <Social
+                href="https://twitter.com/Norduniversitet"
+                icon={<Twitter />}
+              >
+                Twitter
               </Social>
-              <Social href="http://instagram.com/Norduniversitet">
-                <Instagram />
+              <Social
+                href="http://instagram.com/Norduniversitet"
+                icon={<Instagram />}
+              >
+                Instagram
               </Social>
             </div>
             <a

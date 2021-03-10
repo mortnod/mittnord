@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
-const Social = ({ children, href, styles }) => (
+const Social = ({ children, href, styles, icon }) => (
   <a
     href={href}
     sx={{
@@ -25,7 +26,8 @@ const Social = ({ children, href, styles }) => (
       ...styles,
     }}
   >
-    {children}
+    {icon}
+    <ScreenReaderOnly>{children}</ScreenReaderOnly>
   </a>
 );
 

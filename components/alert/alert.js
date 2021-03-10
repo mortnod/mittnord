@@ -5,13 +5,14 @@ import Dot from './dot';
 import isDarkTheme from '../../utils/isDarkTheme';
 import Cross from '../icons/cross';
 import IconButton from '../iconButton/iconButton';
+import { withTranslation } from '../../i18n';
 
 const shouldHideAlert = (startAt, endAt, closedAt) => {
   const now = new Date().getTime();
   return startAt > now || endAt < now || closedAt > startAt;
 };
 
-export default function Alert({ children, href, startAt, endAt, important }) {
+function Alert({ children, href, startAt, endAt, important, t }) {
   const [closedAt, setClosedAt] = useStickyState(
     '1989-02-04',
     'alert-closed-at'
@@ -75,7 +76,11 @@ export default function Alert({ children, href, startAt, endAt, important }) {
         iconStyles={{
           fontSize: 'sm',
         }}
-      />
+      >
+        {t('Close')}
+      </IconButton>
     </a>
   );
 }
+
+export default withTranslation('common')(Alert);

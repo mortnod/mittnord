@@ -59,7 +59,9 @@ function SearchField({ t }) {
             bg: 'background',
           },
         }}
-      />
+      >
+        {t('Search')}
+      </IconButton>
     </form>
   );
 }
