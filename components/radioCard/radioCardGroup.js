@@ -11,7 +11,7 @@ const RadioCardGroup = ({ legend, icon, children }) => {
             alignItems: 'center',
             fontSize: 'md',
             fontWeight: '600',
-            mb: '4',
+            pb: '4',
           }}
         >
           {!!icon && (
