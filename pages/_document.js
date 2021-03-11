@@ -17,7 +17,7 @@ export default class extends Document {
       // eslint-disable-next-line no-underscore-dangle
       <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
-          <link rel="shortcut icon" href="/images/favicon.ico" />
+          <link rel="icon" id="favicon" href="/favicon.ico" />
           <LoadFonts />
           {/* Progressive Web App */}
           <link rel="manifest" href="/manifest.json" />

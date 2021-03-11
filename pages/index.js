@@ -14,6 +14,7 @@ import Footer from '../components/footer/footer';
 import Wrap from '../components/layout/wrap';
 import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
+import setFavicon from '../components/head/setFavicon';
 
 function IndexPage({ language }) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -30,6 +31,8 @@ function IndexPage({ language }) {
   const closeSettings = () => {
     setIsSettingsOpen(false);
   };
+
+  setFavicon();
 
   return (
     <LanguageContext.Provider value={language}>
