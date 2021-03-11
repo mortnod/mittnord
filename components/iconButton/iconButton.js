@@ -20,6 +20,7 @@ const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (
       borderRadius: 'full',
       width: '36px',
       height: '36px',
+      flexShrink: 0,
 
       '&.focus-visible': {
         boxShadow: 'outline',

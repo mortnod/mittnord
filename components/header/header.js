@@ -35,7 +35,7 @@ function Header({ openSettings }) {
           onClick={openSettings}
           styles={{
             display: ['flex', null, 'none'],
-            ml: '3',
+            ml: [2, 3],
             width: '40px',
             height: '40px',
           }}

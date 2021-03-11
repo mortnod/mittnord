@@ -33,6 +33,7 @@ function Alert({ children, href, startAt, endAt, important, t }) {
       href={href}
       sx={{
         display: 'flex',
+        alignItems: 'center',
         flexGrow: 1,
         width: '100%',
         height: 'min-content',
