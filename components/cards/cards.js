@@ -48,7 +48,7 @@ const Cards = ({ t }) => {
       <Card
         heading={t('Email')}
         icon={PaperPlane}
-        href=""
+        href="https://outlook.office365.com/mail/inbox"
         analyticsAction="Email"
       />
       <Card
@@ -60,7 +60,7 @@ const Cards = ({ t }) => {
       <Card
         heading={t('Timetable')}
         icon={Calendar}
-        href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fopen%2Fri1Q7.html"
+        href="https://cloud.timeedit.net/nord/web/open/ri1Q1.html"
         analyticsAction="Timetable"
       />
       <Card
@@ -117,7 +117,7 @@ const Cards = ({ t }) => {
         heading={t('Corona')}
         icon={Virus}
         href={{
-          nb: 'www.nord.no/koronavirus',
+          nb: 'https://www.nord.no/koronavirus',
           en:
             'https://www.nord.no/en/news-events/coronavirus/Pages/default.aspx',
         }}
