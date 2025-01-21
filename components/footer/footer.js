@@ -3,17 +3,11 @@ import { jsx } from 'theme-ui';
 
 import { i18n, withTranslation } from '../../i18n';
 import { event } from '../../utils/gtag';
-import isDarkTheme from '../../utils/isDarkTheme';
-import Nord from '../icons/nord';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
-import Facebook from '../icons/facebook';
-import Instagram from '../icons/instagram';
-import Twitter from '../icons/twitter';
 import Wrap from '../layout/wrap';
 
 import SettingsButton from './settingsButton';
-import Social from './social';
 
 function Footer({ t, openSettings }) {
   const handleLanguageClick = () => {
@@ -45,93 +39,6 @@ function Footer({ t, openSettings }) {
             alignItems: 'center',
           }}
         >
-          <div
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: ['column', null, null, 'row'],
-            }}
-          >
-            <a
-              href={t('nord-href')}
-              rel="noreferrer noopener"
-              target="_blank"
-              onClick={() =>
-                event({ category: 'Other', action: 'Go to nord.no' })
-              }
-              sx={{
-                fontSize: '128px',
-                lineHeight: '0',
-                color: 'icon',
-                mb: [8, null, null, 0],
-                outline: 'none',
-                borderRadius: 2,
-
-                '&.focus-visible': {
-                  boxShadow: 'outline',
-                },
-
-                ':hover': {
-                  color: 'iconHover',
-                },
-              }}
-            >
-              <Nord variant="solid" color="currentColor" />
-            </a>
-            <div
-              sx={{
-                ml: [0, null, null, 10],
-                mb: [8, null, null, 0],
-                display: 'flex',
-              }}
-            >
-              <Social
-                href="https://www.facebook.com/Norduniversitet"
-                styles={{ ml: [0, null, null, 3] }}
-                icon={<Facebook />}
-              >
-                Facebook
-              </Social>
-              <Social
-                href="https://twitter.com/Norduniversitet"
-                icon={<Twitter />}
-              >
-                Twitter
-              </Social>
-              <Social
-                href="http://instagram.com/Norduniversitet"
-                icon={<Instagram />}
-              >
-                Instagram
-              </Social>
-            </div>
-            <a
-              href={t('privacy-href')}
-              sx={{
-                color: 'icon',
-                fontSize: 'lg',
-                textDecoration: 'none',
-                fontWeight: '500',
-                ml: [0, null, null, 6],
-                mb: [5, null, null, 0],
-                outline: 'none',
-                borderRadius: 'full',
-                px: 4,
-                py: 2,
-
-                '&.focus-visible': {
-                  boxShadow: 'outline',
-                },
-
-                ':hover': {
-                  color: 'iconHover',
-                  bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
-                },
-              }}
-            >
-              {t('Privacy')}
-            </a>
-          </div>
           <div
             sx={{
               display: 'flex',
