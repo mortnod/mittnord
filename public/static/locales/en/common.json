@@ -4,7 +4,7 @@
   "Canvas": "Canvas",
   "Studentweb": "Studentweb",
   "Email": "Email",
-  "Office 365": "Office 365",
+  "Office 365": "Microsoft 365",
   "Timetable": "Timetable",
   "Book room": "Book room",
   "Print": "Print",
@@ -24,7 +24,7 @@
   "Settings": "Settings",
   "Search": "Search",
   "Close": "Close",
-  "search-href": "https://www.nord.no/en/Search/Pages/results.aspx?k=",
+  "search-href": "https://www.nord.no/en?keyword=",
   "alert-content": "Using facemasks on campus and in teaching settings",
   "alert-href": "https://www.nord.no/en/news-events/coronavirus/Pages/Using-facemasks-on-campus-and-in-teaching-settings.aspx"
 }
