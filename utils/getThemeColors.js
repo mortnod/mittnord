@@ -9,12 +9,12 @@ const getThemeColors = (colorMode) => {
   const { theme, colorMode: selectedColorMode } = useThemeUI();
 
   if (colorMode) {
-    return theme.colors.modes[colorMode];
+    return theme.rawColors.modes[colorMode];
   }
 
   return selectedColorMode === DEFAULT_COLOR_MODE
-    ? theme.colors
-    : theme.colors.modes[selectedColorMode];
+    ? theme.rawColors
+    : theme.rawColors.modes[selectedColorMode];
 };
 
 export default getThemeColors;

@@ -10,7 +10,7 @@ const setFavicon = () => {
   const favicon = document.getElementById('favicon');
 
   switch (colorMode) {
-    case 'default':
+    case undefined:
     case 'artic':
       favicon.href = '/favicon.ico';
       break;

@@ -17,14 +17,14 @@ function Settings({ isOpen, onClose }) {
       backgroundColor: 'rgb(0 0 0 / 25%)',
     },
     content: {
-      color: theme.colors.heading,
+      color: theme.rawColors.heading,
       top: 0,
       bottom: 0,
       right: 0,
       left: 'unset',
       borderRadius: 'unset',
       /* stylelint-disable-next-line value-keyword-case */
-      backgroundColor: theme.colors.modalBg,
+      backgroundColor: theme.rawColors.modalBg,
       border: 'none',
       boxShadow: theme.shadows[6],
       width: theme.sizes[80],
