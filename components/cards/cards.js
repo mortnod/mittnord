@@ -13,7 +13,7 @@ import Map from '../icons/map';
 import Office from '../icons/office';
 import PaperPlane from '../icons/paperPlane';
 import Print from '../icons/print';
-import Virus from '../icons/virus';
+import Comments from '../icons/comments';
 
 import Card from './card';
 
@@ -114,14 +114,13 @@ const Cards = ({ t }) => {
         analyticsAction="IT help"
       />
       <Card
-        heading={t('Corona')}
-        icon={Virus}
+        heading={t('Nora')}
+        icon={Comments}
         href={{
-          nb: 'https://www.nord.no/koronavirus',
-          en:
-            'https://www.nord.no/en/news-events/coronavirus/Pages/default.aspx',
+          nb: 'https://nora-test.nord.no/',
+          en: 'https://nora-test.nord.no/',
         }}
-        analyticsAction="Corona"
+        analyticsAction="Nora"
       />
     </div>
   );
