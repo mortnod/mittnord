@@ -2,12 +2,11 @@
 import { useRef } from 'react';
 import { jsx } from 'theme-ui';
 
-import { withTranslation } from '../../i18n';
 import isDarkTheme from '../../utils/isDarkTheme';
 import Search from '../icons/search';
 import IconButton from '../iconButton/iconButton';
 
-function SearchField({ t }) {
+function SearchField() {
   const searchInput = useRef(null);
 
   return (
@@ -15,11 +14,11 @@ function SearchField({ t }) {
       sx={{ ml: [0, 'auto'], width: ['100%', 'auto'], position: 'relative' }}
       onSubmit={(e) => {
         e.preventDefault();
-        window.open(t('search-href') + searchInput.current.value);
+        window.open(`search-href${searchInput.current.value}`);
       }}
     >
       <input
-        placeholder={t('Search')}
+        placeholder="Search"
         ref={searchInput}
         sx={{
           WebkitAppearance: 'none',
@@ -62,10 +61,10 @@ function SearchField({ t }) {
           },
         }}
       >
-        {t('Search')}
+        Search
       </IconButton>
     </form>
   );
 }
 
-export default withTranslation('common')(SearchField);
+export default SearchField;

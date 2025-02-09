@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { withTranslation } from '../../i18n';
 import Books from '../icons/books';
 import Calendar from '../icons/calendar';
 import Canvas from '../icons/canvas';
@@ -17,7 +16,7 @@ import Comments from '../icons/comments';
 
 import Card from './card';
 
-const Cards = ({ t }) => {
+const Cards = () => {
   return (
     <div
       sx={{
@@ -34,43 +33,43 @@ const Cards = ({ t }) => {
       }}
     >
       <Card
-        heading={t('Canvas')}
+        heading="Canvas"
         icon={Canvas}
         href="https://nord.instructure.com/"
         analyticsAction="Canvas"
       />
       <Card
-        heading={t('Studentweb')}
+        heading="Studentweb"
         icon={GraduationCap}
         href="https://fsweb.no/studentweb/login.jsf?inst=FSNORD"
         analyticsAction="Studentweb"
       />
       <Card
-        heading={t('Email')}
+        heading="Email"
         icon={PaperPlane}
         href="https://outlook.office365.com/mail/inbox"
         analyticsAction="Email"
       />
       <Card
-        heading={t('Office 365')}
+        heading="Office 365"
         icon={Office}
         href="https://o365.nord.no/"
         analyticsAction="Office 365"
       />
       <Card
-        heading={t('Timetable')}
+        heading="Timetable"
         icon={Calendar}
         href="https://cloud.timeedit.net/nord/web/open/ri1Q1.html"
         analyticsAction="Timetable"
       />
       <Card
-        heading={t('Book room')}
+        heading="Book room"
         icon={Igloo}
         href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fstudent%2Fri1Q8.html"
         analyticsAction="Book room"
       />
       <Card
-        heading={t('Print')}
+        heading="Print"
         icon={Print}
         href={{
           nb: 'https://www.nord.no/no/Student/ithjelp/utskrift',
@@ -80,13 +79,13 @@ const Cards = ({ t }) => {
         analyticsAction="Print"
       />
       <Card
-        heading={t('Campus map')}
+        heading="Campus map"
         icon={Map}
         href="https://use.mazemap.com/#config=nord&v=1&zlevel=1&center=13.414466,65.522958&zoom=5.9&campuses=nord&campusid=255"
         analyticsAction="Campus map"
       />
       <Card
-        heading={t('Library')}
+        heading="Library"
         icon={Books}
         href={{
           nb: 'https://www.nord.no/no/bibliotek',
@@ -95,7 +94,7 @@ const Cards = ({ t }) => {
         analyticsAction="Library"
       />
       <Card
-        heading={t('Cafeteria')}
+        heading="Cafeteria"
         icon={Cutlery}
         href={{
           nb: 'https://www.studentinord.no/kantine',
@@ -104,7 +103,7 @@ const Cards = ({ t }) => {
         analyticsAction="Cafeteria"
       />
       <Card
-        heading={t('IT help')}
+        heading="IT help"
         icon={LaptopMedical}
         href={{
           nb: 'https://www.nord.no/no/student/ithjelp',
@@ -114,7 +113,7 @@ const Cards = ({ t }) => {
         analyticsAction="IT help"
       />
       <Card
-        heading={t('Nora')}
+        heading="Nora"
         icon={Comments}
         href={{
           nb: 'https://nora-test.nord.no/',
@@ -126,4 +125,4 @@ const Cards = ({ t }) => {
   );
 };
 
-export default withTranslation('common')(Cards);
+export default Cards;

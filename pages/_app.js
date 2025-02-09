@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { ThemeProvider } from 'theme-ui';
 import 'focus-visible';
 
-import { appWithTranslation } from '../i18n';
 import theme from '../constants/theme';
 import * as gtag from '../utils/gtag';
 
@@ -36,4 +35,4 @@ MyApp.getInitialProps = async (appContext) => ({
   ...(await App.getInitialProps(appContext)),
 });
 
-export default appWithTranslation(MyApp);
+export default MyApp;

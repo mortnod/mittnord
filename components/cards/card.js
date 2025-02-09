@@ -4,7 +4,6 @@ import { jsx } from 'theme-ui';
 import CardHeading from './cardHeading';
 import { gradientAnimation } from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
-import { useLanguage } from '../../utils/languageContext';
 import isDarkTheme from '../../utils/isDarkTheme';
 
 const AspectRatioOuter = ({ children }) => (
@@ -41,7 +40,6 @@ const AspectRatioInner = ({ children }) => (
 );
 
 export default function Card({ heading, icon, href, analyticsAction }) {
-  const language = useLanguage();
   const Icon = icon;
 
   const handleClick = () => {
@@ -57,7 +55,7 @@ export default function Card({ heading, icon, href, analyticsAction }) {
     }
 
     if (typeof href === 'object' && href !== null) {
-      return href[language];
+      return href.nb;
     }
 
     throw new Error(

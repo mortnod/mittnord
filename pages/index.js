@@ -3,10 +3,7 @@ import { jsx } from 'theme-ui';
 import { useState } from 'react';
 import Head from 'next/head';
 
-import { withTranslation } from '../i18n';
 import { event } from '../utils/gtag';
-import { LanguageContext } from '../utils/languageContext';
-import getInitialLanguage from '../utils/getInitialLanguage';
 import Cards from '../components/cards/cards';
 import GradientBar from '../components/gradientBar';
 import Header from '../components/header/header';
@@ -16,7 +13,7 @@ import Main from '../components/layout/main';
 import Settings from '../components/settings/settings';
 import setFavicon from '../components/head/setFavicon';
 
-function IndexPage({ language }) {
+function IndexPage() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const openSettings = (elementLocation) => {
@@ -35,7 +32,7 @@ function IndexPage({ language }) {
   setFavicon();
 
   return (
-    <LanguageContext.Provider value={language}>
+    <>
       <Head>
         <title>Mitt Nord</title>
       </Head>
@@ -48,17 +45,8 @@ function IndexPage({ language }) {
       </Main>
       <Footer openSettings={() => openSettings('footer')} />
       <Settings isOpen={isSettingsOpen} onClose={closeSettings} />
-    </LanguageContext.Provider>
+    </>
   );
 }
 
-IndexPage.getInitialProps = async ({ req, res }) => {
-  const language = getInitialLanguage(req, res);
-
-  return {
-    namespacesRequired: ['common'],
-    language,
-  };
-};
-
-export default withTranslation('common')(IndexPage);
+export default IndexPage;

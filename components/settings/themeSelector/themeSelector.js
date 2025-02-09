@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from 'theme-ui';
 
-import { withTranslation } from '../../../i18n';
 import { event } from '../../../utils/gtag';
 import { colorModes } from '../../../constants/theme';
 import RadioCard from '../../radioCard/radioCard';
@@ -9,7 +8,7 @@ import RadioCardGroup from '../../radioCard/radioCardGroup';
 import PaintRoller from '../../icons/paintRoller';
 import ThemePreview from './themePreview';
 
-const ThemeSelector = ({ t }) => {
+const ThemeSelector = () => {
   const [colorMode, setColorMode] = useColorMode();
 
   const handleChange = (mode) => {
@@ -18,12 +17,12 @@ const ThemeSelector = ({ t }) => {
   };
 
   return (
-    <RadioCardGroup legend={t('Theme')} icon={<PaintRoller />}>
+    <RadioCardGroup legend="Theme" icon={<PaintRoller />}>
       {colorModes.map((mode) => (
         <RadioCard
           id={`theme-select-${mode}`}
           name="theme-select"
-          labelText={t(mode)}
+          labelText={mode}
           key={mode}
           checked={colorMode === mode}
           onChange={() => handleChange(mode)}
@@ -35,4 +34,4 @@ const ThemeSelector = ({ t }) => {
   );
 };
 
-export default withTranslation('common')(ThemeSelector);
+export default ThemeSelector;

@@ -24,9 +24,7 @@
   "dependencies": {
     "cookies": "0.9.1",
     "focus-visible": "^5.2.1",
-    "i18next": "^19.8.4",
     "next": "^10.0.3",
-    "next-i18next": "^7.0.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-modal": "^3.16.3",

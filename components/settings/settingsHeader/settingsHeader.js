@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { withTranslation } from '../../../i18n';
 import Times from '../../icons/times';
 import isDarkTheme from '../../../utils/isDarkTheme';
 import IconButton from '../../iconButton/iconButton';
 
-const SettingsHeader = ({ onClose, t }) => {
+const SettingsHeader = ({ onClose }) => {
   return (
     <div
       sx={{
@@ -28,7 +27,7 @@ const SettingsHeader = ({ onClose, t }) => {
           color: 'icon',
         }}
       >
-        {t('Settings')}
+        Settings
       </div>
       <IconButton
         onClick={onClose}
@@ -47,10 +46,10 @@ const SettingsHeader = ({ onClose, t }) => {
           fontSize: 'lg',
         }}
       >
-        {t('Close')}
+        Close
       </IconButton>
     </div>
   );
 };
 
-export default withTranslation('common')(SettingsHeader);
+export default SettingsHeader;

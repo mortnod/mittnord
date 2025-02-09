@@ -1,23 +1,22 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { i18n, withTranslation } from '../../i18n';
-import { event } from '../../utils/gtag';
+// import { event } from '../../utils/gtag';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
 import Wrap from '../layout/wrap';
 
 import SettingsButton from './settingsButton';
 
-function Footer({ t, openSettings }) {
+function Footer({ openSettings }) {
   const handleLanguageClick = () => {
-    const newLanguage = i18n.language === 'nb' ? 'en' : 'nb';
-    i18n.changeLanguage(newLanguage);
-    event({
-      category: 'Language',
-      action: `Set language: ${newLanguage}`,
-      label: 'Via footer',
-    });
+    // const newLanguage = i18n.language === 'nb' ? 'en' : 'nb';
+    // i18n.changeLanguage(newLanguage);
+    // event({
+    //   category: 'Language',
+    //   action: `Set language: ${newLanguage}`,
+    //   label: 'Via footer',
+    // });
   };
 
   return (
@@ -56,14 +55,14 @@ function Footer({ t, openSettings }) {
                 ml: [0, null, null, 2],
               }}
             >
-              {t('Change theme')}
+              Change theme
             </SettingsButton>
             <SettingsButton
               icon={<Globe />}
               onClick={handleLanguageClick}
               sx={{ ml: [0, null, null, 2], mb: [6, null, null, 0] }}
             >
-              {t('change-locale')}
+              change-locale
             </SettingsButton>
           </div>
         </div>
@@ -72,4 +71,4 @@ function Footer({ t, openSettings }) {
   );
 }
 
-export default withTranslation('common')(Footer);
+export default Footer;

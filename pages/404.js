@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { withTranslation } from '../i18n';
-
-function Custom404({ t }) {
+function Custom404() {
   return (
     <div
       sx={{
@@ -15,12 +13,12 @@ function Custom404({ t }) {
         height: '100vh',
       }}
     >
-      <h1>{t('404 - Page Not Found')}</h1>
+      <h1>404 - Page Not Found</h1>
       <a href="/" sx={{ color: 'icon', mt: '2' }}>
-        {t('Go to frontpage')}
+        Go to frontpage
       </a>
     </div>
   );
 }
 
-export default withTranslation('common')(Custom404);
+export default Custom404;
