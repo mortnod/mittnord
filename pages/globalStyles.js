@@ -2,6 +2,7 @@ import React from 'react';
 
 const GlobalStyles = () => {
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <style jsx global>{`
       @font-face {
         font-family: 'Azo Sans';

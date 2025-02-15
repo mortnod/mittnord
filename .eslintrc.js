@@ -31,5 +31,8 @@ module.exports = {
     // YOLO!
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
+
+    // Use the rule, but don't complain about theme-ui cx prop
+    'react/no-unknown-property': ['error', { ignore: ['sx'] }],
   },
 };
