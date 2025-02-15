@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 import Books from '../icons/books';
 import Calendar from '../icons/calendar';
 import Canvas from '../icons/canvas';

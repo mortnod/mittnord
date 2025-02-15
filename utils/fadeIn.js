@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 
 const FadeIn = ({ duration = 300, delay = 0, children }) => {
   return (

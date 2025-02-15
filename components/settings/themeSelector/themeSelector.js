@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, useColorMode } from 'theme-ui';
+/** @jsxImportSource theme-ui */
+import { useColorMode } from 'theme-ui';
 
 import { event } from '../../../utils/gtag';
 import { colorModes } from '../../../constants/theme';

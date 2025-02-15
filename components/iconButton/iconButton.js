@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
 const IconButton = ({ children, styles, icon, iconStyles, size, ...rest }) => (

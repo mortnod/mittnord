@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 export default function Dot({ size = '8px' }) {
   return (
     <div sx={{ position: 'relative', width: size, mr: 4 }}>

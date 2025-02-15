@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 import Cog from '../icons/cog';
 
 import Brand from './brand';

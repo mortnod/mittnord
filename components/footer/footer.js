@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 // import { event } from '../../utils/gtag';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';

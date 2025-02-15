@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 import CardHeading from './cardHeading';
 import gradientAnimation from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 import { useState } from 'react';
 import Head from 'next/head';
 

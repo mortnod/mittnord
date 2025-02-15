@@ -1,7 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource theme-ui */
 import { useRef } from 'react';
-import { jsx } from 'theme-ui';
-
 import isDarkTheme from '../../utils/isDarkTheme';
 import Search from '../icons/search';
 import IconButton from '../iconButton/iconButton';

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 import FadeIn from '../../utils/fadeIn';
 import Alert from '../alert/alert';
 import ClientOnly from '../clientOnly/clientOnly';

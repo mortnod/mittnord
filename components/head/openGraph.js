@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 const OpenGraph = () => {
   const url = process.env.NEXT_PUBLIC_BASE_URL;
 

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 
 import { event } from '../../../utils/gtag';
 import RadioCard from '../../radioCard/radioCard';

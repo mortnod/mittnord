@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
 const Social = ({ children, href, styles, icon }) => (

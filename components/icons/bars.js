@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 const Bars = () => (
   <svg
     sx={{ width: '1em', height: '1em', fill: 'currentColor' }}

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, useThemeUI } from 'theme-ui';
+/** @jsxImportSource theme-ui */
+import { useThemeUI } from 'theme-ui';
 import Modal from 'react-modal';
 
 import LanguageSelector from './languageSelector/languageSelector';

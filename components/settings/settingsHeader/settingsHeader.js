@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 
 import Times from '../../icons/times';
 import isDarkTheme from '../../../utils/isDarkTheme';

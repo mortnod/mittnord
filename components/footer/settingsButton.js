@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 import isDarkTheme from '../../utils/isDarkTheme';
 
 const settingsButton = ({ children, icon, iconSx, ...rest }) => (

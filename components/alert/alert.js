@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 import useStickyState from '../../utils/useStickyState';
 import Dot from './dot';
 import isDarkTheme from '../../utils/isDarkTheme';

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, useThemeUI } from 'theme-ui';
+/** @jsxImportSource theme-ui */
+import { useThemeUI } from 'theme-ui';
 
 import gradientAnimation from '../../../utils/gradientAnimation';
 import isDarkTheme from '../../../utils/isDarkTheme';

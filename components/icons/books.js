@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-
+/** @jsxImportSource theme-ui */
 const Books = () => (
   <svg
     sx={{ width: ['50%', null, '52%'], fill: 'currentColor' }}

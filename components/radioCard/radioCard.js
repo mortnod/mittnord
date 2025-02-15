@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+/** @jsxImportSource theme-ui */
 
 import Checkmark from './checkmark';
 import gradientAnimation from '../../utils/gradientAnimation';
