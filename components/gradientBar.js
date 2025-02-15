@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { gradientAnimation } from '../utils/gradientAnimation';
+import gradientAnimation from '../utils/gradientAnimation';
 
 export default function gradientBar() {
   return (

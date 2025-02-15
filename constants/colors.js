@@ -1,3 +1,25 @@
+const themePreview = {
+  auroraBackground: '#0D1115',
+  auroraCardHover: '#1E2634',
+  auroraGradient1: '#7ABBFE',
+  auroraGradient2: '#B0FDC4',
+
+  articBackground: '#F2F6F9',
+  articCardHover: 'white',
+  articGradient1: '#7ABBFE',
+  articGradient2: '#93D7A5',
+
+  duskBackground: '#0D1115',
+  duskCardHover: '#1E2634',
+  duskGradient1: '#FF585D',
+  duskGradient2: '#FFA300',
+
+  dawnBackground: '#F5F4F3',
+  dawnCardHover: 'white',
+  dawnGradient1: '#FF585D',
+  dawnGradient2: '#FFA300',
+};
+
 const aurora = {
   background: '#0D1115',
   modalBg: '#1E2634',
@@ -13,6 +35,7 @@ const aurora = {
   border: '#1C2635',
   border2: '#353F51',
   outline: '#7ABBFE',
+  ...themePreview,
 };
 
 const artic = {
@@ -30,6 +53,7 @@ const artic = {
   border: '#D4DAE4',
   border2: '#9EA4B0',
   outline: '#7ABBFE',
+  ...themePreview,
 };
 
 const dusk = {
@@ -47,6 +71,7 @@ const dusk = {
   border: '#1C2635',
   border2: '#353F51',
   outline: '#7ABBFE',
+  ...themePreview,
 };
 
 const dawn = {
@@ -64,6 +89,7 @@ const dawn = {
   border: '#D4DAE4',
   border2: '#9EA4B0',
   outline: '#7ABBFE',
+  ...themePreview,
 };
 
 const colors = {

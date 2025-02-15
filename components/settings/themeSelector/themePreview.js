@@ -1,20 +1,23 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, useThemeUI } from 'theme-ui';
 
-import { gradientAnimation } from '../../../utils/gradientAnimation';
-import getThemeColors from '../../../utils/getThemeColors';
+import gradientAnimation from '../../../utils/gradientAnimation';
 import isDarkTheme from '../../../utils/isDarkTheme';
 
-const ExampleCard = ({ colors }) => (
-  <div sx={{ pb: '100%', bg: colors.cardHover, boxShadow: '3' }} />
-);
-
 const ThemePreview = ({ colorMode }) => {
-  const colors = getThemeColors(colorMode);
+  const { theme } = useThemeUI();
 
   return (
-    <div sx={{ bg: colors.background }}>
-      <div sx={{ height: '2', ...gradientAnimation({ colorMode }) }} />
+    <div sx={{ bg: `${theme.colors[`${colorMode}Background`]}` }}>
+      <div
+        sx={{
+          height: '2',
+          ...gradientAnimation({
+            gradient1: `${colorMode}Gradient1`,
+            gradient2: `${colorMode}Gradient2`,
+          }),
+        }}
+      />
       <div
         sx={{
           display: 'grid',
@@ -33,12 +36,16 @@ const ThemePreview = ({ colorMode }) => {
           },
         }}
       >
-        <ExampleCard colors={colors} />
-        <ExampleCard colors={colors} />
-        <ExampleCard colors={colors} />
-        <ExampleCard colors={colors} />
-        <ExampleCard colors={colors} />
-        <ExampleCard colors={colors} />
+        {[...Array(6)].map((_e, i) => (
+          <div
+            key={i} // eslint-disable-line react/no-array-index-key
+            sx={{
+              pb: '100%',
+              bg: `${theme.colors[`${colorMode}CardHover`]}`,
+              boxShadow: '3',
+            }}
+          />
+        ))}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import Checkmark from './checkmark';
-import { gradientAnimation } from '../../utils/gradientAnimation';
+import gradientAnimation from '../../utils/gradientAnimation';
 import isDarkTheme from '../../utils/isDarkTheme';
 
 const RadioCard = ({

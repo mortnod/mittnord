@@ -149,4 +149,3 @@ export default {
 };
 
 export const colorModes = Object.keys(colors.modes);
-export const DEFAULT_COLOR_MODE = undefined;

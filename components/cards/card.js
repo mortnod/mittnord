@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import CardHeading from './cardHeading';
-import { gradientAnimation } from '../../utils/gradientAnimation';
+import gradientAnimation from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
 import isDarkTheme from '../../utils/isDarkTheme';
 
