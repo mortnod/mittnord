@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import App from 'next/app';
 import { useRouter } from 'next/router';
-import { ThemeProvider } from 'theme-ui';
+import { ThemeUIProvider } from 'theme-ui';
 import 'focus-visible';
 
 import theme from '../constants/theme';
@@ -24,10 +24,10 @@ function MyApp({ Component, pageProps }) {
   // End Google Analytics
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeUIProvider theme={theme}>
       <GlobalStyles />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </ThemeUIProvider>
   );
 }
 
