@@ -1,10 +1,12 @@
 /** @jsxImportSource theme-ui */
-import CardHeading from './cardHeading';
+
 import gradientAnimation from '../../utils/gradientAnimation';
 import { event } from '../../utils/gtag';
 import isDarkTheme from '../../utils/isDarkTheme';
 
-const AspectRatioOuter = ({ children }) => (
+import CardHeading from './cardHeading';
+
+const AspectRatioOuter = ({ children }: { children: React.ReactNode }) => (
   <div
     sx={{
       position: 'relative',
@@ -23,7 +25,7 @@ const AspectRatioOuter = ({ children }) => (
   </div>
 );
 
-const AspectRatioInner = ({ children }) => (
+const AspectRatioInner = ({ children }: { children: React.ReactNode }) => (
   <div
     sx={{
       position: 'absolute',
@@ -37,9 +39,14 @@ const AspectRatioInner = ({ children }) => (
   </div>
 );
 
-export default function Card({ heading, icon, href, analyticsAction }) {
-  const Icon = icon;
+type Props = {
+  heading: string;
+  icon: React.ReactNode;
+  href: string | { nb: string; en: string };
+  analyticsAction: string;
+};
 
+export default function Card({ heading, icon, href, analyticsAction }: Props) {
   const handleClick = () => {
     event({ category: 'Links', action: analyticsAction });
   };
@@ -103,7 +110,7 @@ export default function Card({ heading, icon, href, analyticsAction }) {
           }}
         >
           <CardHeading>{heading}</CardHeading>
-          <Icon />
+          {icon}
         </a>
       </AspectRatioInner>
     </AspectRatioOuter>
