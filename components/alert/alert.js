@@ -13,14 +13,14 @@ const shouldHideAlert = (startAt, endAt, closedAt) => {
 function Alert({ children, href, startAt, endAt, important }) {
   const [closedAt, setClosedAt] = useStickyState(
     '1989-02-04',
-    'alert-closed-at'
+    'alert-closed-at',
   );
 
   if (
     shouldHideAlert(
       startAt.getTime(),
       endAt.getTime(),
-      new Date(closedAt).getTime()
+      new Date(closedAt).getTime(),
     )
   ) {
     return null;

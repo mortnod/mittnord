@@ -57,7 +57,7 @@ export default function Card({ heading, icon, href, analyticsAction }) {
     }
 
     throw new Error(
-      '[Card] Unsupported href prop provided. Must be either a string or object'
+      '[Card] Unsupported href prop provided. Must be either a string or object',
     );
   };
 

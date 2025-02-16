@@ -71,8 +71,7 @@ const Cards = () => {
         icon={Print}
         href={{
           nb: 'https://www.nord.no/no/Student/ithjelp/utskrift',
-          en:
-            'https://www.nord.no/en/about/service-units/helpdesk/printing/Pages/default.aspx',
+          en: 'https://www.nord.no/en/about/service-units/helpdesk/printing/Pages/default.aspx',
         }}
         analyticsAction="Print"
       />
@@ -105,8 +104,7 @@ const Cards = () => {
         icon={LaptopMedical}
         href={{
           nb: 'https://www.nord.no/no/student/ithjelp',
-          en:
-            'https://www.nord.no/en/about/service-units/helpdesk/Pages/default.aspx',
+          en: 'https://www.nord.no/en/about/service-units/helpdesk/Pages/default.aspx',
         }}
         analyticsAction="IT help"
       />

@@ -74,7 +74,9 @@ const GlobalStyles = () => {
       }
 
       .ReactModal__Content {
-        transition: opacity 200ms ease-out, transform 200ms ease-out;
+        transition:
+          opacity 200ms ease-out,
+          transform 200ms ease-out;
         transform: translateX(100%);
       }
 
