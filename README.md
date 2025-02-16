@@ -26,16 +26,12 @@ Create `.vscode/settings.json` and paste the following:
     // For ESLint
     "source.fixAll.eslint": true,
     // For TSLint
-    "source.fixAll.tslint": true,
-    // For Stylelint
-    "source.fixAll.stylelint": true
+    "source.fixAll.tslint": true
   },
 
   // Don't use built in CSS validation.
   // Stylelint will handle the validation.
   "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
   "javascript.validate.enable": false
 }
 ```

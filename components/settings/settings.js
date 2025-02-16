@@ -12,19 +12,17 @@ function Settings({ isOpen, onClose }) {
   const { theme } = useThemeUI();
 
   const styles = {
-    /* stylelint-disable-next-line selector-type-no-unknown */
     overlay: {
       backgroundColor: 'rgb(0 0 0 / 25%)',
     },
     content: {
-      color: theme.rawColors.heading,
+      color: theme.colors.heading,
       top: 0,
       bottom: 0,
       right: 0,
       left: 'unset',
       borderRadius: 'unset',
-      /* stylelint-disable-next-line value-keyword-case */
-      backgroundColor: theme.rawColors.modalBg,
+      backgroundColor: theme.colors.modalBg,
       border: 'none',
       boxShadow: theme.shadows[6],
       width: theme.sizes[80],
