@@ -1,3 +1,6 @@
+import type { Theme, ThemeUIContextValue } from 'theme-ui';
+import { useThemeUI } from 'theme-ui';
+
 import colors from './colors';
 
 const breakpoints = [
@@ -74,8 +77,8 @@ const space = {
 const spaceKeys = Object.keys(space);
 spaceKeys.forEach((key) => {
   const negativeKey = `-${key}`;
-  const negativeValue = `-${space[key]}`;
-  space[negativeKey] = negativeValue;
+  const negativeValue = `-${space[key as keyof typeof space]}`;
+  space[negativeKey as keyof typeof space] = negativeValue;
 });
 
 const fonts = {
@@ -126,7 +129,9 @@ const fontSizes = {
   '2xl': '28px',
 };
 
-export default {
+const makeTheme = <T extends Theme>(t: T) => t;
+
+export const theme = makeTheme({
   breakpoints,
   space,
   sizes: space,
@@ -145,6 +150,14 @@ export default {
       },
     },
   },
-};
+});
+
+export type ExactTheme = typeof theme;
 
 export const colorModes = Object.keys(colors.modes);
+
+interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
+  theme: ExactTheme;
+}
+
+export const useTheme = useThemeUI as unknown as () => ExactContextValue;
