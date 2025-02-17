@@ -1,15 +1,21 @@
 /** @jsxImportSource theme-ui */
-import { useThemeUI } from 'theme-ui';
 import Modal from 'react-modal';
 
+import { useTheme } from '../../constants/theme';
+
 import LanguageSelector from './languageSelector/languageSelector';
-import ThemeSelector from './themeSelector/themeSelector';
 import SettingsHeader from './settingsHeader/settingsHeader';
+import ThemeSelector from './themeSelector/themeSelector';
 
 Modal.setAppElement('#__next');
 
-function Settings({ isOpen, onClose }) {
-  const { theme } = useThemeUI();
+type Props = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+function Settings({ isOpen, onClose }: Props) {
+  const { theme } = useTheme();
 
   const styles = {
     overlay: {
