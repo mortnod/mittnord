@@ -1,15 +1,18 @@
 /** @jsxImportSource theme-ui */
-import { ThemeUICSSProperties } from 'theme-ui';
+import { ButtonHTMLAttributes, ClassAttributes, SyntheticEvent } from 'react';
+import { SxProp, ThemeUIStyleObject } from 'theme-ui';
 
 import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
 type Props = {
   children?: React.ReactNode;
-  styles: ThemeUICSSProperties;
-  iconStyles: ThemeUICSSProperties;
+  styles: ThemeUIStyleObject;
+  iconStyles?: ThemeUIStyleObject;
   icon: React.ReactNode;
-  onClick: () => void;
-};
+  onClick?: (e: SyntheticEvent) => void;
+} & ClassAttributes<HTMLButtonElement> &
+  ButtonHTMLAttributes<HTMLButtonElement> &
+  SxProp;
 
 const IconButton = ({ children, styles, icon, iconStyles, ...rest }: Props) => (
   <button

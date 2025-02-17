@@ -1,16 +1,25 @@
 /** @jsxImportSource theme-ui */
-import useStickyState from '../../utils/useStickyState';
-import Dot from './dot';
 import isDarkTheme from '../../utils/isDarkTheme';
-import Cross from '../icons/cross';
+import useStickyState from '../../utils/useStickyState';
 import IconButton from '../iconButton/iconButton';
+import Cross from '../icons/cross';
 
-const shouldHideAlert = (startAt, endAt, closedAt) => {
+import Dot from './dot';
+
+const shouldHideAlert = (startAt: number, endAt: number, closedAt: number) => {
   const now = new Date().getTime();
   return startAt > now || endAt < now || closedAt > startAt;
 };
 
-function Alert({ children, href, startAt, endAt, important }) {
+type Props = {
+  children: React.ReactNode;
+  href: string;
+  startAt: Date;
+  endAt: Date;
+  important: boolean;
+};
+
+function Alert({ children, href, startAt, endAt, important }: Props) {
   const [closedAt, setClosedAt] = useStickyState(
     '1989-02-04',
     'alert-closed-at',

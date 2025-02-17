@@ -1,6 +1,12 @@
 /** @jsxImportSource theme-ui */
 
-const RadioCardGroup = ({ legend, icon, children }) => {
+type Props = {
+  legend: string;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+};
+
+const RadioCardGroup = ({ legend, icon, children }: Props) => {
   return (
     <fieldset sx={{ border: 'none', mb: 10 }}>
       <legend>

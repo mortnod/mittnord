@@ -1,12 +1,12 @@
 /** @jsxImportSource theme-ui */
 
 import { event } from '../../../utils/gtag';
+import Globe from '../../icons/globe';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
-import Globe from '../../icons/globe';
 
 const LanguageSelector = () => {
-  const handleChange = (language) => {
+  const handleChange = (language: 'en' | 'nb') => {
     event({
       category: 'Language',
       action: `Set language: ${language}`,

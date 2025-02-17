@@ -1,12 +1,16 @@
 /** @jsxImportSource theme-ui */
+import IconButton from '../iconButton/iconButton';
 import Cog from '../icons/cog';
 
 import Brand from './brand';
 import CurrentAlert from './currentAlert';
 import SearchField from './searchField';
-import IconButton from '../iconButton/iconButton';
 
-function Header({ openSettings }) {
+type Props = {
+  openSettings: () => void;
+};
+
+function Header({ openSettings }: Props) {
   return (
     <>
       <div

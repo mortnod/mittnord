@@ -1,18 +1,19 @@
 /** @jsxImportSource theme-ui */
 import { useRef } from 'react';
+
 import isDarkTheme from '../../utils/isDarkTheme';
-import Search from '../icons/search';
 import IconButton from '../iconButton/iconButton';
+import Search from '../icons/search';
 
 function SearchField() {
-  const searchInput = useRef(null);
+  const searchInput = useRef<HTMLInputElement>(null);
 
   return (
     <form
       sx={{ ml: [0, 'auto'], width: ['100%', 'auto'], position: 'relative' }}
       onSubmit={(e) => {
         e.preventDefault();
-        window.open(`search-href${searchInput.current.value}`);
+        window.open(`search-href${searchInput.current?.value}`);
       }}
     >
       <input

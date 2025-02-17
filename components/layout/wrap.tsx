@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-const Wrap = ({ children }) => (
+const Wrap = ({ children }: { children: React.ReactNode }) => (
   <div
     sx={{
       mx: 'auto',

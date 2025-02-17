@@ -6,7 +6,11 @@ import Wrap from '../layout/wrap';
 
 import SettingsButton from './settingsButton';
 
-function Footer({ openSettings }) {
+type Props = {
+  openSettings: () => void;
+};
+
+function Footer({ openSettings }: Props) {
   const handleLanguageClick = () => {
     // const newLanguage = i18n.language === 'nb' ? 'en' : 'nb';
     // i18n.changeLanguage(newLanguage);

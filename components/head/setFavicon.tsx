@@ -1,8 +1,8 @@
-import { useThemeUI } from 'theme-ui';
+import { useTheme } from '../../constants/theme';
 import useHasMounted from '../../utils/useHasMounted';
 
 const setFavicon = () => {
-  const { colorMode } = useThemeUI();
+  const { colorMode } = useTheme();
   const hasMounted = useHasMounted();
 
   if (!hasMounted) return;

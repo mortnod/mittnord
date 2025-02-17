@@ -18,7 +18,7 @@ const themePreview = {
   dawnCardHover: 'white',
   dawnGradient1: '#FF585D',
   dawnGradient2: '#FFA300',
-};
+} as const;
 
 const aurora = {
   background: '#0D1115',
@@ -36,7 +36,7 @@ const aurora = {
   border2: '#353F51',
   outline: '#7ABBFE',
   ...themePreview,
-};
+} as const;
 
 const artic = {
   background: '#F2F6F9',
@@ -54,7 +54,7 @@ const artic = {
   border2: '#9EA4B0',
   outline: '#7ABBFE',
   ...themePreview,
-};
+} as const;
 
 const dusk = {
   background: '#0D1115',
@@ -72,7 +72,7 @@ const dusk = {
   border2: '#353F51',
   outline: '#7ABBFE',
   ...themePreview,
-};
+} as const;
 
 const dawn = {
   background: '#F5F4F3',
@@ -90,7 +90,7 @@ const dawn = {
   border2: '#9EA4B0',
   outline: '#7ABBFE',
   ...themePreview,
-};
+} as const;
 
 const colors = {
   ...artic,
@@ -100,6 +100,6 @@ const colors = {
     dusk,
     dawn,
   },
-};
+} as const;
 
 export default colors;

@@ -1,17 +1,18 @@
 /** @jsxImportSource theme-ui */
 import { useColorMode } from 'theme-ui';
 
+import { ColorMode, colorModes } from '../../../constants/theme';
 import { event } from '../../../utils/gtag';
-import { colorModes } from '../../../constants/theme';
+import PaintRoller from '../../icons/paintRoller';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
-import PaintRoller from '../../icons/paintRoller';
+
 import ThemePreview from './themePreview';
 
 const ThemeSelector = () => {
-  const [colorMode, setColorMode] = useColorMode();
+  const [colorMode, setColorMode] = useColorMode<ColorMode>();
 
-  const handleChange = (mode) => {
+  const handleChange = (mode: ColorMode) => {
     event({ category: 'Theme', action: `Set theme: ${mode}` });
     setColorMode(mode);
   };
@@ -25,9 +26,9 @@ const ThemeSelector = () => {
           labelText={mode}
           key={mode}
           checked={colorMode === mode}
-          onChange={() => handleChange(mode)}
+          onChange={() => handleChange(mode as ColorMode)}
         >
-          <ThemePreview colorMode={mode} />
+          <ThemePreview colorMode={mode as ColorMode} />
         </RadioCard>
       ))}
     </RadioCardGroup>

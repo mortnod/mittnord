@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-const ScreenReaderOnly = ({ children }) => {
+const ScreenReaderOnly = ({ children }: { children: React.ReactNode }) => {
   return (
     <span
       sx={{

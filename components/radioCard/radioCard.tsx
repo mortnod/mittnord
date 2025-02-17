@@ -1,8 +1,19 @@
 /** @jsxImportSource theme-ui */
 
-import Checkmark from './checkmark';
 import gradientAnimation from '../../utils/gradientAnimation';
 import isDarkTheme from '../../utils/isDarkTheme';
+
+import Checkmark from './checkmark';
+
+type Props = {
+  name: string;
+  id: string;
+  disabled?: boolean;
+  labelText: string;
+  checked?: boolean;
+  onChange: () => void;
+  children?: React.ReactNode;
+};
 
 const RadioCard = ({
   name,
@@ -12,7 +23,7 @@ const RadioCard = ({
   checked,
   onChange,
   children,
-}) => {
+}: Props) => {
   return (
     <div>
       <input
@@ -28,9 +39,8 @@ const RadioCard = ({
         onChange={onChange}
       />
 
-      <label /* eslint-disable-line jsx-a11y/label-has-associated-control */
+      <label
         htmlFor={id}
-        disabled={disabled}
         sx={{
           bg: 'transparent',
           display: 'block',

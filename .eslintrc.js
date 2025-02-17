@@ -236,5 +236,8 @@ module.exports = {
         ],
       },
     ],
+
+    // Conflicts with Prettier
+    '@typescript-eslint/indent': 'off',
   },
 };

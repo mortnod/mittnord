@@ -154,7 +154,11 @@ export const theme = makeTheme({
 
 export type ExactTheme = typeof theme;
 
-export const colorModes = Object.keys(colors.modes);
+export const colorModes = ['aurora', 'artic', 'dusk', 'dawn'];
+export type ColorMode = 'aurora' | 'artic' | 'dusk' | 'dawn';
+
+export type ColorKeys = keyof typeof theme.colors;
+export type ColorValues = (typeof theme.colors)[ColorKeys];
 
 interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
   theme: ExactTheme;

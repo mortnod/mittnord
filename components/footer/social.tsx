@@ -1,7 +1,17 @@
 /** @jsxImportSource theme-ui */
+import React from 'react';
+import { ThemeUIStyleObject } from 'theme-ui';
+
 import ScreenReaderOnly from '../screenReaderOnly/screenReaderOnly';
 
-const Social = ({ children, href, styles, icon }) => (
+type Props = {
+  children: React.ReactNode;
+  href: string;
+  styles: ThemeUIStyleObject;
+  icon: React.ReactNode;
+};
+
+const Social = ({ children, href, styles, icon }: Props) => (
   <a
     href={href}
     sx={{

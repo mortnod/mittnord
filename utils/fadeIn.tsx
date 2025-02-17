@@ -1,6 +1,12 @@
 /** @jsxImportSource theme-ui */
 
-const FadeIn = ({ duration = 300, delay = 0, children }) => {
+type Props = {
+  duration?: number;
+  delay?: number;
+  children?: React.ReactNode;
+};
+
+const FadeIn = ({ duration = 300, delay = 0, children }: Props) => {
   return (
     <div
       sx={{

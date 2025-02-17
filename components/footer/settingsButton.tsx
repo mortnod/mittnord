@@ -1,7 +1,17 @@
 /** @jsxImportSource theme-ui */
+import { Theme, ThemeUIStyleObject } from 'theme-ui';
+
 import isDarkTheme from '../../utils/isDarkTheme';
 
-const settingsButton = ({ children, icon, iconSx, ...rest }) => (
+type Props = {
+  children: React.ReactNode;
+  onClick: () => void;
+  icon: React.ReactNode;
+  iconSx?: ThemeUIStyleObject<Theme> | undefined;
+  sx?: ThemeUIStyleObject<Theme> | undefined;
+};
+
+const settingsButton = ({ children, icon, iconSx, ...rest }: Props) => (
   <button
     type="button"
     sx={{

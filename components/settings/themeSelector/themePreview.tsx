@@ -1,15 +1,20 @@
 /** @jsxImportSource theme-ui */
-import { useThemeUI } from 'theme-ui';
 
+import { ColorMode, useTheme } from '../../../constants/theme';
 import gradientAnimation from '../../../utils/gradientAnimation';
 import isDarkTheme from '../../../utils/isDarkTheme';
 
-const ThemePreview = ({ colorMode }) => {
-  const { theme } = useThemeUI();
+type Props = {
+  colorMode: ColorMode;
+};
+
+const ThemePreview = ({ colorMode }: Props) => {
+  const { theme } = useTheme();
 
   return (
     <div sx={{ bg: `${theme.colors[`${colorMode}Background`]}` }}>
       <div
+        // @ts-expect-error Seems like gradientAnimation causes trouble with typing and I'm too lazy to properly fix
         sx={{
           height: '2',
           ...gradientAnimation({

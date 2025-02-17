@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-const Checkmark = ({ checked }) => (
+const Checkmark = ({ checked }: { checked?: boolean }) => (
   <svg
     sx={{
       fill: 'currentColor',

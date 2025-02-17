@@ -1,5 +1,10 @@
 /** @jsxImportSource theme-ui */
-export default function CardHeading({ children }) {
+
+export default function CardHeading({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <h2
       sx={{

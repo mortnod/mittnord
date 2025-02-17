@@ -4,7 +4,9 @@ import Times from '../../icons/times';
 import isDarkTheme from '../../../utils/isDarkTheme';
 import IconButton from '../../iconButton/iconButton';
 
-const SettingsHeader = ({ onClose }) => {
+type Props = { onClose: () => void };
+
+const SettingsHeader = ({ onClose }: Props) => {
   return (
     <div
       sx={{

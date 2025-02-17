@@ -22,7 +22,7 @@ function Settings({ isOpen, onClose }: Props) {
       backgroundColor: 'rgb(0 0 0 / 25%)',
     },
     content: {
-      color: theme.colors.heading,
+      color: theme?.colors?.heading,
       top: 0,
       bottom: 0,
       right: 0,
