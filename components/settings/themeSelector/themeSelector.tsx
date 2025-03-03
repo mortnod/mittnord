@@ -2,6 +2,7 @@
 import { useColorMode } from 'theme-ui';
 
 import { ColorMode, colorModes } from '../../../constants/theme';
+import { useI18nContext } from '../../../src/i18n/i18n-react';
 import { event } from '../../../utils/gtag';
 import PaintRoller from '../../icons/paintRoller';
 import RadioCard from '../../radioCard/radioCard';
@@ -11,6 +12,7 @@ import ThemePreview from './themePreview';
 
 const ThemeSelector = () => {
   const [colorMode, setColorMode] = useColorMode<ColorMode>();
+  const { LL } = useI18nContext();
 
   const handleChange = (mode: ColorMode) => {
     event({ category: 'Theme', action: `Set theme: ${mode}` });
@@ -18,12 +20,12 @@ const ThemeSelector = () => {
   };
 
   return (
-    <RadioCardGroup legend="Theme" icon={<PaintRoller />}>
+    <RadioCardGroup legend={LL.THEME()} icon={<PaintRoller />}>
       {colorModes.map((mode) => (
         <RadioCard
           id={`theme-select-${mode}`}
           name="theme-select"
-          labelText={mode}
+          labelText={LL[mode as ColorMode]()}
           key={mode}
           checked={colorMode === mode}
           onChange={() => handleChange(mode as ColorMode)}

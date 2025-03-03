@@ -1,12 +1,15 @@
 /** @jsxImportSource theme-ui */
 
-import Times from '../../icons/times';
+import { useI18nContext } from '../../../src/i18n/i18n-react';
 import isDarkTheme from '../../../utils/isDarkTheme';
 import IconButton from '../../iconButton/iconButton';
+import Times from '../../icons/times';
 
 type Props = { onClose: () => void };
 
 const SettingsHeader = ({ onClose }: Props) => {
+  const { LL } = useI18nContext();
+
   return (
     <div
       sx={{
@@ -28,7 +31,7 @@ const SettingsHeader = ({ onClose }: Props) => {
           color: 'icon',
         }}
       >
-        Settings
+        {LL.SETTINGS()}
       </div>
       <IconButton
         onClick={onClose}

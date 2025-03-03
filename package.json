@@ -17,19 +17,20 @@
     "url": "https://github.com/mortnod/mittnord/issues"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 9999",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "translate": "typesafe-i18n"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
-    "cookies": "0.9.1",
     "focus-visible": "5.2.1",
     "next": "15.1.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-modal": "3.16.3",
-    "theme-ui": "0.17.2"
+    "theme-ui": "0.17.2",
+    "typesafe-i18n": "^5.26.2"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.3",

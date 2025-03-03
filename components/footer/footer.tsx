@@ -1,5 +1,8 @@
 /** @jsxImportSource theme-ui */
-// import { event } from '../../utils/gtag';
+import { useRouter } from 'next/router';
+
+import { useI18nContext } from '../../src/i18n/i18n-react';
+import { event } from '../../utils/gtag';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
 import Wrap from '../layout/wrap';
@@ -11,14 +14,20 @@ type Props = {
 };
 
 function Footer({ openSettings }: Props) {
-  const handleLanguageClick = () => {
-    // const newLanguage = i18n.language === 'nb' ? 'en' : 'nb';
-    // i18n.changeLanguage(newLanguage);
-    // event({
-    //   category: 'Language',
-    //   action: `Set language: ${newLanguage}`,
-    //   label: 'Via footer',
-    // });
+  const { LL, locale, setLocale } = useI18nContext();
+  const router = useRouter();
+
+  const changeLanguage = () => {
+    const newLocale = locale === 'nb' ? 'en' : 'nb';
+
+    router.push('/', '/', { locale: newLocale });
+    setLocale(newLocale);
+
+    event({
+      category: 'Language',
+      action: `Set language: ${newLocale}`,
+      label: 'Via footer',
+    });
   };
 
   return (
@@ -57,14 +66,14 @@ function Footer({ openSettings }: Props) {
                 ml: [0, null, null, 2],
               }}
             >
-              Change theme
+              {LL.CHANGE_THEME()}
             </SettingsButton>
             <SettingsButton
               icon={<Globe />}
-              onClick={handleLanguageClick}
+              onClick={changeLanguage}
               sx={{ ml: [0, null, null, 2], mb: [6, null, null, 0] }}
             >
-              change-locale
+              {locale === 'nb' ? LL.ENGLISH() : LL.NORWEGIAN()}
             </SettingsButton>
           </div>
         </div>

@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+import { useI18nContext } from '../../src/i18n/i18n-react';
 import Books from '../icons/books';
 import Calendar from '../icons/calendar';
 import Canvas from '../icons/canvas';
@@ -15,6 +16,8 @@ import Print from '../icons/print';
 import Card from './card';
 
 const Cards = () => {
+  const { LL } = useI18nContext();
+
   return (
     <div
       sx={{
@@ -31,43 +34,43 @@ const Cards = () => {
       }}
     >
       <Card
-        heading="Canvas"
+        heading={LL.CANVAS()}
         icon={<Canvas />}
         href="https://nord.instructure.com/"
         analyticsAction="Canvas"
       />
       <Card
-        heading="Studentweb"
+        heading={LL.STUDENTWEB()}
         icon={<GraduationCap />}
         href="https://fsweb.no/studentweb/login.jsf?inst=FSNORD"
         analyticsAction="Studentweb"
       />
       <Card
-        heading="Email"
+        heading={LL.EMAIL()}
         icon={<PaperPlane />}
         href="https://outlook.office365.com/mail/inbox"
         analyticsAction="Email"
       />
       <Card
-        heading="Office 365"
+        heading={LL.MICROSOFT_365()}
         icon={<Office />}
         href="https://o365.nord.no/"
         analyticsAction="Office 365"
       />
       <Card
-        heading="Timetable"
+        heading={LL.TIMETABLE()}
         icon={<Calendar />}
         href="https://cloud.timeedit.net/nord/web/open/ri1Q1.html"
         analyticsAction="Timetable"
       />
       <Card
-        heading="Book room"
+        heading={LL.BOOK_ROOM()}
         icon={<Igloo />}
         href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fstudent%2Fri1Q8.html"
         analyticsAction="Book room"
       />
       <Card
-        heading="Print"
+        heading={LL.PRINT()}
         icon={<Print />}
         href={{
           nb: 'https://www.nord.no/no/Student/ithjelp/utskrift',
@@ -76,13 +79,13 @@ const Cards = () => {
         analyticsAction="Print"
       />
       <Card
-        heading="Campus map"
+        heading={LL.MAP()}
         icon={<Map />}
         href="https://use.mazemap.com/#config=nord&v=1&zlevel=1&center=13.414466,65.522958&zoom=5.9&campuses=nord&campusid=255"
         analyticsAction="Campus map"
       />
       <Card
-        heading="Library"
+        heading={LL.LIBRARY()}
         icon={<Books />}
         href={{
           nb: 'https://www.nord.no/no/bibliotek',
@@ -91,7 +94,7 @@ const Cards = () => {
         analyticsAction="Library"
       />
       <Card
-        heading="Cafeteria"
+        heading={LL.CAFETERIA()}
         icon={<Cutlery />}
         href={{
           nb: 'https://www.studentinord.no/kantine',
@@ -100,7 +103,7 @@ const Cards = () => {
         analyticsAction="Cafeteria"
       />
       <Card
-        heading="IT help"
+        heading={LL.IT_HELP()}
         icon={<LaptopMedical />}
         href={{
           nb: 'https://www.nord.no/no/student/ithjelp',
@@ -109,7 +112,7 @@ const Cards = () => {
         analyticsAction="IT help"
       />
       <Card
-        heading="Nora"
+        heading={LL.NORA()}
         icon={<Comments />}
         href={{
           nb: 'https://nora-test.nord.no/',

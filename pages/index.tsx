@@ -1,16 +1,16 @@
 /** @jsxImportSource theme-ui */
-import { useState } from 'react';
 import Head from 'next/head';
+import { useState } from 'react';
 
-import { event } from '../utils/gtag';
 import Cards from '../components/cards/cards';
-import GradientBar from '../components/gradientBar';
-import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
-import Wrap from '../components/layout/wrap';
-import Main from '../components/layout/main';
-import Settings from '../components/settings/settings';
+import GradientBar from '../components/gradientBar';
 import setFavicon from '../components/head/setFavicon';
+import Header from '../components/header/header';
+import Main from '../components/layout/main';
+import Wrap from '../components/layout/wrap';
+import Settings from '../components/settings/settings';
+import { event } from '../utils/gtag';
 
 function IndexPage() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);

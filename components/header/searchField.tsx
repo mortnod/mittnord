@@ -1,23 +1,25 @@
 /** @jsxImportSource theme-ui */
 import { useRef } from 'react';
 
+import { useI18nContext } from '../../src/i18n/i18n-react';
 import isDarkTheme from '../../utils/isDarkTheme';
 import IconButton from '../iconButton/iconButton';
 import Search from '../icons/search';
 
 function SearchField() {
   const searchInput = useRef<HTMLInputElement>(null);
+  const { LL } = useI18nContext();
 
   return (
     <form
       sx={{ ml: [0, 'auto'], width: ['100%', 'auto'], position: 'relative' }}
       onSubmit={(e) => {
         e.preventDefault();
-        window.open(`search-href${searchInput.current?.value}`);
+        window.open(`${LL.SEARCH_URL()}${searchInput.current?.value}`);
       }}
     >
       <input
-        placeholder="Search"
+        placeholder={LL.SEARCH()}
         ref={searchInput}
         sx={{
           WebkitAppearance: 'none',
