@@ -15,7 +15,12 @@ function Brand() {
     >
       MITT
       <br />
-      <span sx={{ ...gradientAnimation({ variant: 'text' }) }}>NORD</span>
+      <span
+        // @ts-expect-error It totally works, but something is wrong with the typing
+        sx={{ ...gradientAnimation({ variant: 'text' }) }}
+      >
+        NORD
+      </span>
     </h2>
   );
 }

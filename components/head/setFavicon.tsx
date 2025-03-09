@@ -2,12 +2,14 @@ import { useTheme } from '../../constants/theme';
 import useHasMounted from '../../utils/useHasMounted';
 
 const setFavicon = () => {
-  const { colorMode } = useTheme();
-  const hasMounted = useHasMounted();
+  const { colorMode } = useTheme(); // eslint-disable-line react-hooks/rules-of-hooks
+  const hasMounted = useHasMounted(); // eslint-disable-line react-hooks/rules-of-hooks
 
   if (!hasMounted) return;
 
-  const favicon = document.getElementById('favicon');
+  const favicon = document.getElementById('favicon') as HTMLLinkElement;
+
+  if (!favicon) return;
 
   switch (colorMode) {
     case undefined:

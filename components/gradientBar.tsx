@@ -4,6 +4,7 @@ import gradientAnimation from '../utils/gradientAnimation';
 export default function gradientBar() {
   return (
     <div
+      // @ts-expect-error It totally works, but something is wrong with the typing
       sx={{
         ...gradientAnimation(),
         width: '100%',

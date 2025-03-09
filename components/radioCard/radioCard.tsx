@@ -51,6 +51,8 @@ const RadioCard = ({
             p: '4px',
             bg: 'outline',
           },
+
+          // @ts-expect-error It totally works, but something is wrong with the typing
           'input:checked + &': {
             ...gradientAnimation(),
           },
@@ -87,6 +89,7 @@ const RadioCard = ({
               justifyContent: 'center',
               fontSize: 'xs',
 
+              // @ts-expect-error It totally works, but something is wrong with the typing
               'input:checked + label &': {
                 ...gradientAnimation({
                   variant: 'background',

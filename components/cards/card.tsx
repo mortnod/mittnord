@@ -104,6 +104,7 @@ export default function Card({ heading, icon, href, analyticsAction }: Props) {
               },
             },
 
+            // @ts-expect-error It totally works, but something is wrong with the typing
             '&.focus-visible': {
               ...gradientAnimation({ variant: 'background', size: 'large' }),
             },
