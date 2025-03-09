@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import { useI18nContext } from '../../src/i18n/i18n-react';
 import { event } from '../../utils/gtag';
+import About from '../about/AboutModal';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
 import Wrap from '../layout/wrap';
@@ -76,6 +77,7 @@ function Footer({ openSettings }: Props) {
               {locale === 'nb' ? LL.ENGLISH() : LL.NORWEGIAN()}
             </SettingsButton>
           </div>
+          <About />
         </div>
       </Wrap>
     </div>

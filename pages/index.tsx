@@ -15,7 +15,7 @@ import { event } from '../utils/gtag';
 function IndexPage() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  const openSettings = (elementLocation) => {
+  const openSettings = (elementLocation: string) => {
     setIsSettingsOpen(true);
     event({
       category: 'Other',
