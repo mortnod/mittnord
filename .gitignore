@@ -26,9 +26,6 @@
 # next.js
 /.next/
 /out/
-public/sw.js
-public/sw.js.map
-public/workbox-*
 
 # production
 /build
@@ -49,3 +46,7 @@ yarn-error.log*
 .vercel
 
 /extras
+
+# Serwist
+public/sw*
+public/swe-worker*
