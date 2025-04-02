@@ -40,8 +40,9 @@ function SearchField() {
           height: '48px',
           fontFamily: 'sans',
           fontSize: 'md',
-          px: 4,
           py: 3,
+          pl: 4,
+          pr: 10,
 
           border: 0,
           boxShadow: isDarkTheme() ? 'dark' : 3,
