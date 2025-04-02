@@ -39,7 +39,7 @@ const nb = {
   ABOUT_THE_PEOPLE_HEADING: 'Folka bak',
   ABOUT_THE_PEOPLE_P1: 'Mitt Nord er laget av ',
   ABOUT_THE_PEOPLE_P2:
-    '. Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Nå for tiden lever han av å lagen lever han av å lage ',
+    '. Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Nå for tiden lever han av å lage',
   ABOUT_THE_PEOPLE_P3: 'journalsystemer for psykologer',
   ABOUT_CONTACT_US_HEADING: 'Noe på hjertet?',
   ABOUT_CONTACT_US_P1: 'Har du tips, ris eller ros? Send en e-post til',

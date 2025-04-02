@@ -155,7 +155,7 @@ type RootTranslation = {
 	 */
 	ABOUT_THE_PEOPLE_P1: string
 	/**
-	 * .​ ​M​o​r​t​e​n​ ​e​r​ ​o​v​e​r​ ​g​j​e​n​n​o​m​s​n​i​t​t​l​i​g​ ​g​l​a​d​ ​i​ ​s​u​r​e​ ​o​r​d​s​p​i​l​l​,​ ​v​e​l​f​e​r​m​e​n​t​e​r​t​e​ ​s​u​r​d​e​i​g​s​b​r​ø​d​ ​o​g​ ​g​o​d​e​ ​b​r​u​k​e​r​o​p​p​l​e​v​e​l​s​e​r​.​ ​N​å​ ​f​o​r​ ​t​i​d​e​n​ ​l​e​v​e​r​ ​h​a​n​ ​a​v​ ​å​ ​l​a​g​e​n​ ​l​e​v​e​r​ ​h​a​n​ ​a​v​ ​å​ ​l​a​g​e​ 
+	 * .​ ​M​o​r​t​e​n​ ​e​r​ ​o​v​e​r​ ​g​j​e​n​n​o​m​s​n​i​t​t​l​i​g​ ​g​l​a​d​ ​i​ ​s​u​r​e​ ​o​r​d​s​p​i​l​l​,​ ​v​e​l​f​e​r​m​e​n​t​e​r​t​e​ ​s​u​r​d​e​i​g​s​b​r​ø​d​ ​o​g​ ​g​o​d​e​ ​b​r​u​k​e​r​o​p​p​l​e​v​e​l​s​e​r​.​ ​N​å​ ​f​o​r​ ​t​i​d​e​n​ ​l​e​v​e​r​ ​h​a​n​ ​a​v​ ​å​ ​l​a​g​e
 	 */
 	ABOUT_THE_PEOPLE_P2: string
 	/**
@@ -342,7 +342,7 @@ export type TranslationFunctions = {
 	 */
 	ABOUT_THE_PEOPLE_P1: () => LocalizedString
 	/**
-	 * . Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Nå for tiden lever han av å lagen lever han av å lage 
+	 * . Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Nå for tiden lever han av å lage
 	 */
 	ABOUT_THE_PEOPLE_P2: () => LocalizedString
 	/**
