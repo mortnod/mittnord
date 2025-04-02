@@ -13,7 +13,7 @@ const en = {
   LIBRARY: 'Library',
   CAFETERIA: 'Cafeteria',
   IT_HELP: 'IT help',
-  NORA: 'Nora',
+  ORDNETT: 'Dictionary',
   ERROR_NOT_FOUND: '404 - Page not found',
   GO_TO_FRONTPAGE: 'Go to frontpage',
   aurora: 'Aurora',

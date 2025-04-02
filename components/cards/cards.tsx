@@ -3,10 +3,10 @@ import { useI18nContext } from '../../src/i18n/i18n-react';
 import Books from '../icons/books';
 import Calendar from '../icons/calendar';
 import Canvas from '../icons/canvas';
-import Comments from '../icons/comments';
 import Cutlery from '../icons/cutlery';
 import GraduationCap from '../icons/graduationCap';
 import Igloo from '../icons/igloo';
+import Language from '../icons/language';
 import LaptopMedical from '../icons/laptopMedical';
 import Map from '../icons/map';
 import Office from '../icons/office';
@@ -112,13 +112,13 @@ const Cards = () => {
         analyticsAction="IT help"
       />
       <Card
-        heading={LL.NORA()}
-        icon={<Comments />}
+        heading={LL.ORDNETT()}
+        icon={<Language />}
         href={{
-          nb: 'https://nora-test.nord.no/',
-          en: 'https://nora-test.nord.no/',
+          nb: 'https://www.ordnett.no/gyldendal/login/gyldendal',
+          en: 'https://www.ordnett.no/gyldendal/login/gyldendal',
         }}
-        analyticsAction="Nora"
+        analyticsAction="Ordnett"
       />
     </div>
   );

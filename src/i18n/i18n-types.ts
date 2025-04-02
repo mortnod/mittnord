@@ -63,9 +63,9 @@ type RootTranslation = {
 	 */
 	IT_HELP: string
 	/**
-	 * N​o​r​a
+	 * O​r​d​n​e​t​t
 	 */
-	NORA: string
+	ORDNETT: string
 	/**
 	 * 4​0​4​ ​-​ ​S​i​d​e​n​ ​f​i​n​n​e​s​ ​i​k​k​e
 	 */
@@ -230,9 +230,9 @@ export type TranslationFunctions = {
 	 */
 	IT_HELP: () => LocalizedString
 	/**
-	 * Nora
+	 * Ordnett
 	 */
-	NORA: () => LocalizedString
+	ORDNETT: () => LocalizedString
 	/**
 	 * 404 - Siden finnes ikke
 	 */

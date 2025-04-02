@@ -13,7 +13,7 @@ const nb = {
   LIBRARY: 'Bibliotek',
   CAFETERIA: 'Kantine',
   IT_HELP: 'IT-hjelp',
-  NORA: 'Nora',
+  ORDNETT: 'Ordnett',
   ERROR_NOT_FOUND: '404 - Siden finnes ikke',
   GO_TO_FRONTPAGE: 'Gå til forsiden',
   aurora: 'Nordlys',
