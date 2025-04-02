@@ -45,6 +45,11 @@ const en = {
   ABOUT_CONTACT_US_P1: 'Got something to say? Send an email to ',
   ABOUT_CONTACT_US_P2: 'or',
   ABOUT_CONTACT_US_P3: 'check out the code on Github',
+  NORA_Q1: 'When does the exam period begin?',
+  NORA_Q2: 'How do I use the printers?',
+  NORA_Q3: 'How can I connect to the WiFi network?',
+  NORA_Q4: 'What is Feide?',
+  NORA_Q5: 'I have forgotten my password...',
 } satisfies Translation;
 
 export default en;

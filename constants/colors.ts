@@ -35,6 +35,7 @@ const aurora = {
   border: '#1C2635',
   border2: '#353F51',
   outline: '#7ABBFE',
+  placeholder: '#536380',
   ...themePreview,
 } as const;
 
@@ -53,6 +54,7 @@ const artic = {
   border: '#D4DAE4',
   border2: '#9EA4B0',
   outline: '#7ABBFE',
+  placeholder: '#72829e',
   ...themePreview,
 } as const;
 
@@ -71,6 +73,7 @@ const dusk = {
   border: '#1C2635',
   border2: '#353F51',
   outline: '#7ABBFE',
+  placeholder: '#536380',
   ...themePreview,
 } as const;
 
@@ -89,6 +92,7 @@ const dawn = {
   border: '#D4DAE4',
   border2: '#9EA4B0',
   outline: '#7ABBFE',
+  placeholder: '#2d3748',
   ...themePreview,
 } as const;
 

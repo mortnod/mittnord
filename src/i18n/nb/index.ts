@@ -45,6 +45,11 @@ const nb = {
   ABOUT_CONTACT_US_P1: 'Har du tips, ris eller ros? Send en e-post til',
   ABOUT_CONTACT_US_P2: 'eller',
   ABOUT_CONTACT_US_P3: 'sjekk ut koden på Github',
+  NORA_Q1: 'Når starter eksamensperioden?',
+  NORA_Q2: 'Hvordan bruker jeg printerne?',
+  NORA_Q3: 'Hvordan kobler jeg meg til trådløst nett?',
+  NORA_Q4: 'Hva er Feide?',
+  NORA_Q5: 'Jeg har glemt passordet mitt...',
 } satisfies BaseTranslation;
 
 export default nb;

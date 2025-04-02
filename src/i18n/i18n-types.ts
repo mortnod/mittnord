@@ -178,6 +178,26 @@ type RootTranslation = {
 	 * s​j​e​k​k​ ​u​t​ ​k​o​d​e​n​ ​p​å​ ​G​i​t​h​u​b
 	 */
 	ABOUT_CONTACT_US_P3: string
+	/**
+	 * N​å​r​ ​s​t​a​r​t​e​r​ ​e​k​s​a​m​e​n​s​p​e​r​i​o​d​e​n​?
+	 */
+	NORA_Q1: string
+	/**
+	 * H​v​o​r​d​a​n​ ​b​r​u​k​e​r​ ​j​e​g​ ​p​r​i​n​t​e​r​n​e​?
+	 */
+	NORA_Q2: string
+	/**
+	 * H​v​o​r​d​a​n​ ​k​o​b​l​e​r​ ​j​e​g​ ​m​e​g​ ​t​i​l​ ​t​r​å​d​l​ø​s​t​ ​n​e​t​t​?
+	 */
+	NORA_Q3: string
+	/**
+	 * H​v​a​ ​e​r​ ​F​e​i​d​e​?
+	 */
+	NORA_Q4: string
+	/**
+	 * J​e​g​ ​h​a​r​ ​g​l​e​m​t​ ​p​a​s​s​o​r​d​e​t​ ​m​i​t​t​.​.​.
+	 */
+	NORA_Q5: string
 }
 
 export type TranslationFunctions = {
@@ -345,6 +365,26 @@ export type TranslationFunctions = {
 	 * sjekk ut koden på Github
 	 */
 	ABOUT_CONTACT_US_P3: () => LocalizedString
+	/**
+	 * Når starter eksamensperioden?
+	 */
+	NORA_Q1: () => LocalizedString
+	/**
+	 * Hvordan bruker jeg printerne?
+	 */
+	NORA_Q2: () => LocalizedString
+	/**
+	 * Hvordan kobler jeg meg til trådløst nett?
+	 */
+	NORA_Q3: () => LocalizedString
+	/**
+	 * Hva er Feide?
+	 */
+	NORA_Q4: () => LocalizedString
+	/**
+	 * Jeg har glemt passordet mitt...
+	 */
+	NORA_Q5: () => LocalizedString
 }
 
 export type Formatters = {}

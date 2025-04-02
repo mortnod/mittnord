@@ -10,6 +10,19 @@ function SearchField() {
   const searchInput = useRef<HTMLInputElement>(null);
   const { LL } = useI18nContext();
 
+  const getRandomPlaceholder = () => {
+    const taglines = [
+      LL.NORA_Q1(),
+      LL.NORA_Q2(),
+      LL.NORA_Q3(),
+      LL.NORA_Q4(),
+      LL.NORA_Q5(),
+    ];
+
+    const randomId = Math.floor(Math.random() * taglines.length);
+    return taglines[randomId];
+  };
+
   return (
     <form
       sx={{ width: '100%', position: 'relative', mb: [2, 2, 6] }}
@@ -19,7 +32,7 @@ function SearchField() {
       }}
     >
       <input
-        placeholder={LL.SEARCH()}
+        placeholder={getRandomPlaceholder()}
         ref={searchInput}
         sx={{
           WebkitAppearance: 'none',
@@ -38,14 +51,12 @@ function SearchField() {
           outline: 0,
 
           ':hover': {
-            color: 'iconHover',
             bg: 'cardHover',
           },
 
           // Don't show hover colors on phones
           '@media (pointer: coarse)': {
             ':hover': {
-              color: 'icon',
               bg: 'card',
             },
           },
@@ -55,7 +66,7 @@ function SearchField() {
           },
 
           '::placeholder': {
-            color: isDarkTheme() ? 'icon' : 'muted',
+            color: 'placeholder',
             opacity: 1 /* Firefox */,
           },
         }}
