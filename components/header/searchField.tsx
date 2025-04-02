@@ -12,7 +12,7 @@ function SearchField() {
 
   return (
     <form
-      sx={{ ml: [0, 'auto'], width: ['100%', 'auto'], position: 'relative' }}
+      sx={{ width: '100%', position: 'relative', mb: [2, 2, 6] }}
       onSubmit={(e) => {
         e.preventDefault();
         window.open(`${LL.SEARCH_URL()}${searchInput.current?.value}`);
@@ -23,19 +23,32 @@ function SearchField() {
         ref={searchInput}
         sx={{
           WebkitAppearance: 'none',
-          width: ['100%', 64],
-          height: ['42px', null, '44px'],
+          width: '100%',
+          height: '48px',
           fontFamily: 'sans',
           fontSize: 'md',
-          borderRadius: 'full',
           px: 4,
           py: 3,
+
           border: 0,
           boxShadow: isDarkTheme() ? 'dark' : 3,
           letterSpacing: 'wide',
           color: 'heading',
-          bg: isDarkTheme() ? 'border' : 'card',
+          bg: 'card',
           outline: 0,
+
+          ':hover': {
+            color: 'iconHover',
+            bg: 'cardHover',
+          },
+
+          // Don't show hover colors on phones
+          '@media (pointer: coarse)': {
+            ':hover': {
+              color: 'icon',
+              bg: 'card',
+            },
+          },
 
           '&.focus-visible': {
             boxShadow: 'outline',

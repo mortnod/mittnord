@@ -17,6 +17,7 @@ function Header({ openSettings }: Props) {
         sx={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'space-between',
           pb: [2, 3, 4, null, '5.5vh'],
         }}
       >
@@ -31,7 +32,6 @@ function Header({ openSettings }: Props) {
         >
           <CurrentAlert />
         </div>
-        <SearchField />
         <IconButton
           icon={<Cog />}
           onClick={openSettings}
@@ -55,6 +55,7 @@ function Header({ openSettings }: Props) {
       >
         <CurrentAlert />
       </div>
+      <SearchField />
     </>
   );
 }
