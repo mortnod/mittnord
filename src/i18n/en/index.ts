@@ -25,7 +25,7 @@ const en = {
   SETTINGS: 'Settings',
   SEARCH: 'Search',
   CLOSE: 'Close',
-  SEARCH_URL: 'https://www.nord.no/en?keyword=',
+  SEARCH_URL: 'https://nora-test.nord.no/?consent=True&q=',
   ALERT_CONTENT: 'Bruk av munnbind på campus og i undervisningssituasjoner',
   ALERT_HREF:
     'https://www.nord.no/no/aktuelt/informasjon-om-koronavirus/Sider/Bruk-av-munnbind-pa-campus-og-i-undervisningssituasjoner.aspx',

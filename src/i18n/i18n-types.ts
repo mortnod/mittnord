@@ -111,7 +111,7 @@ type RootTranslation = {
 	 */
 	CLOSE: string
 	/**
-	 * h​t​t​p​s​:​/​/​w​w​w​.​n​o​r​d​.​n​o​/​?​k​e​y​w​o​r​d​=
+	 * h​t​t​p​s​:​/​/​n​o​r​a​-​t​e​s​t​.​n​o​r​d​.​n​o​/​?​c​o​n​s​e​n​t​=​T​r​u​e​&​q​=
 	 */
 	SEARCH_URL: string
 	/**
@@ -278,7 +278,7 @@ export type TranslationFunctions = {
 	 */
 	CLOSE: () => LocalizedString
 	/**
-	 * https://www.nord.no/?keyword=
+	 * https://nora-test.nord.no/?consent=True&q=
 	 */
 	SEARCH_URL: () => LocalizedString
 	/**
