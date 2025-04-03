@@ -66,7 +66,7 @@ const Cards = () => {
       <Card
         heading={LL.BOOK_ROOM()}
         icon={<Igloo />}
-        href="https://cloud.timeedit.net/nord/web/timeedit/sso/feide?back=https%3A%2F%2Fcloud.timeedit.net%2Fnord%2Fweb%2Fstudent%2Fri1Q8.html"
+        href="https://cloud.timeedit.net/nord/web/student/ri1Q8.html"
         analyticsAction="Book room"
       />
       <Card
@@ -114,10 +114,7 @@ const Cards = () => {
       <Card
         heading={LL.ORDNETT()}
         icon={<Language />}
-        href={{
-          nb: 'https://www.ordnett.no/gyldendal/login/gyldendal',
-          en: 'https://www.ordnett.no/gyldendal/login/gyldendal',
-        }}
+        href="https://www.ordnett.no/gyldendal/login/gyldendal"
         analyticsAction="Ordnett"
       />
     </div>
