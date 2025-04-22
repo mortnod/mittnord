@@ -1,7 +1,9 @@
 /** @jsxImportSource theme-ui */
 
+import { MouseEvent } from 'react';
+
+import { captureOutboundEvent } from '../../utils/analytics';
 import gradientAnimation from '../../utils/gradientAnimation';
-import { event } from '../../utils/gtag';
 import isDarkTheme from '../../utils/isDarkTheme';
 
 import CardHeading from './cardHeading';
@@ -43,12 +45,15 @@ type Props = {
   heading: string;
   icon: React.ReactNode;
   href: string | { nb: string; en: string };
-  analyticsAction: string;
+  analyticsName: string;
 };
 
-export default function Card({ heading, icon, href, analyticsAction }: Props) {
-  const handleClick = () => {
-    event({ category: 'Links', action: analyticsAction });
+export default function Card({ heading, icon, href, analyticsName }: Props) {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    captureOutboundEvent({
+      clickEvent: e,
+      eventName: analyticsName,
+    });
   };
 
   // Supports both href provided as string or object
@@ -107,6 +112,12 @@ export default function Card({ heading, icon, href, analyticsAction }: Props) {
             // @ts-expect-error It totally works, but something is wrong with the typing
             '&.focus-visible': {
               ...gradientAnimation({ variant: 'background', size: 'large' }),
+            },
+
+            '& svg': {
+              // Ensure that click events hits the anchor link
+              // instead of the icon (needed for Posthog tracking)
+              pointerEvents: 'none',
             },
           }}
         >

@@ -37,37 +37,37 @@ const Cards = () => {
         heading={LL.CANVAS()}
         icon={<Canvas />}
         href="https://nord.instructure.com/"
-        analyticsAction="Canvas"
+        analyticsName="canvas_click"
       />
       <Card
         heading={LL.STUDENTWEB()}
         icon={<GraduationCap />}
         href="https://fsweb.no/studentweb/login.jsf?inst=FSNORD"
-        analyticsAction="Studentweb"
+        analyticsName="studentweb_click"
       />
       <Card
         heading={LL.EMAIL()}
         icon={<PaperPlane />}
         href="https://outlook.office365.com/mail/inbox"
-        analyticsAction="Email"
+        analyticsName="email_click"
       />
       <Card
         heading={LL.MICROSOFT_365()}
         icon={<Office />}
         href="https://o365.nord.no/"
-        analyticsAction="Office 365"
+        analyticsName="microsoft365_click"
       />
       <Card
         heading={LL.TIMETABLE()}
         icon={<Calendar />}
         href="https://cloud.timeedit.net/nord/web/open/ri1Q1.html"
-        analyticsAction="Timetable"
+        analyticsName="timetable_click"
       />
       <Card
         heading={LL.BOOK_ROOM()}
         icon={<Igloo />}
         href="https://cloud.timeedit.net/nord/web/student/ri1Q8.html"
-        analyticsAction="Book room"
+        analyticsName="book_room_click"
       />
       <Card
         heading={LL.PRINT()}
@@ -76,13 +76,13 @@ const Cards = () => {
           nb: 'https://www.nord.no/no/Student/ithjelp/utskrift',
           en: 'https://www.nord.no/en/about/service-units/helpdesk/printing/Pages/default.aspx',
         }}
-        analyticsAction="Print"
+        analyticsName="print_click"
       />
       <Card
         heading={LL.MAP()}
         icon={<Map />}
         href="https://use.mazemap.com/#config=nord&v=1&zlevel=1&center=13.414466,65.522958&zoom=5.9&campuses=nord&campusid=255"
-        analyticsAction="Campus map"
+        analyticsName="campus_map_click"
       />
       <Card
         heading={LL.LIBRARY()}
@@ -91,7 +91,7 @@ const Cards = () => {
           nb: 'https://www.nord.no/no/bibliotek',
           en: 'https://www.nord.no/en/library',
         }}
-        analyticsAction="Library"
+        analyticsName="library_click"
       />
       <Card
         heading={LL.CAFETERIA()}
@@ -100,7 +100,7 @@ const Cards = () => {
           nb: 'https://www.studentinord.no/kantine',
           en: 'https://www.studentinord.no/food-and-beverage',
         }}
-        analyticsAction="Cafeteria"
+        analyticsName="cafeteria_click"
       />
       <Card
         heading={LL.IT_HELP()}
@@ -109,13 +109,13 @@ const Cards = () => {
           nb: 'https://www.nord.no/no/student/ithjelp',
           en: 'https://www.nord.no/en/about/service-units/helpdesk/Pages/default.aspx',
         }}
-        analyticsAction="IT help"
+        analyticsName="it_help_click"
       />
       <Card
         heading={LL.ORDNETT()}
         icon={<Language />}
         href="https://www.ordnett.no/gyldendal/login/gyldendal"
-        analyticsAction="Ordnett"
+        analyticsName="ordnett_click"
       />
     </div>
   );

@@ -10,18 +10,14 @@ import Header from '../components/header/header';
 import Main from '../components/layout/main';
 import Wrap from '../components/layout/wrap';
 import Settings from '../components/settings/settings';
-import { event } from '../utils/gtag';
+import { captureEvent } from '../utils/analytics';
 
 function IndexPage() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const openSettings = (elementLocation: string) => {
     setIsSettingsOpen(true);
-    event({
-      category: 'Other',
-      action: 'Open settings',
-      label: `Via ${elementLocation}`,
-    });
+    captureEvent('open_settings', { via: elementLocation });
   };
 
   const closeSettings = () => {

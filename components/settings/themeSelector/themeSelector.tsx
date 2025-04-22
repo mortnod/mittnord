@@ -3,7 +3,7 @@ import { useColorMode } from 'theme-ui';
 
 import { ColorMode, colorModes } from '../../../constants/theme';
 import { useI18nContext } from '../../../src/i18n/i18n-react';
-import { event } from '../../../utils/gtag';
+import { captureEvent } from '../../../utils/analytics';
 import PaintRoller from '../../icons/paintRoller';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
@@ -15,7 +15,7 @@ const ThemeSelector = () => {
   const { LL } = useI18nContext();
 
   const handleChange = (mode: ColorMode) => {
-    event({ category: 'Theme', action: `Set theme: ${mode}` });
+    captureEvent('theme_change', { theme: mode });
     setColorMode(mode);
   };
 

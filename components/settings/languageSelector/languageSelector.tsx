@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 import { useI18nContext } from '../../../src/i18n/i18n-react';
 import { Locales } from '../../../src/i18n/i18n-types';
-import { event } from '../../../utils/gtag';
+import { captureEvent } from '../../../utils/analytics';
 import Globe from '../../icons/globe';
 import RadioCard from '../../radioCard/radioCard';
 import RadioCardGroup from '../../radioCard/radioCardGroup';
@@ -17,11 +17,7 @@ const LanguageSelector = () => {
     router.push('/', '/', { locale: newLocale });
     setLocale(newLocale);
 
-    event({
-      category: 'Language',
-      action: `Set language: ${locale}`,
-      label: 'Via settings',
-    });
+    captureEvent('language_change', { language: locale });
   };
 
   return (

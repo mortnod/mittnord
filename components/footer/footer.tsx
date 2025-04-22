@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router';
 
 import { useI18nContext } from '../../src/i18n/i18n-react';
-import { event } from '../../utils/gtag';
+import { captureEvent } from '../../utils/analytics';
 import About from '../about/AboutModal';
 import Globe from '../icons/globe';
 import PaintRoller from '../icons/paintRoller';
@@ -24,11 +24,7 @@ function Footer({ openSettings }: Props) {
     router.push('/', '/', { locale: newLocale });
     setLocale(newLocale);
 
-    event({
-      category: 'Language',
-      action: `Set language: ${newLocale}`,
-      label: 'Via footer',
-    });
+    captureEvent('Language_change', { language: newLocale });
   };
 
   return (

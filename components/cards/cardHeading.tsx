@@ -14,6 +14,7 @@ export default function CardHeading({
         fontSize: ['5.2vw', '3.6vw', 'xl'],
         mt: ['3vw', '1vw', 0],
         mb: ['4vw', '3vw', '4'],
+        pointerEvents: 'none',
 
         '.focus-visible &': {
           color: 'background',

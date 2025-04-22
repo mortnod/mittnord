@@ -2,7 +2,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { InitializeColorMode } from 'theme-ui';
 
 import AppIcons from '../components/head/appIcons';
-import InitializeGoogleTagManager from '../components/head/initializeGoogleTagManager';
 import LoadFonts from '../components/head/loadFonts';
 import OpenGraph from '../components/head/openGraph';
 
@@ -18,7 +17,6 @@ export default class extends Document {
           <link rel="manifest" href="/manifest.json" />
           <AppIcons />
           <OpenGraph />
-          <InitializeGoogleTagManager />
         </Head>
         <body>
           <InitializeColorMode />
