@@ -16,7 +16,7 @@ export default function CardHeading({
         mb: ['4vw', '3vw', '4'],
         pointerEvents: 'none',
 
-        '.focus-visible &': {
+        'a:focus-visible &': {
           color: 'background',
         },
       }}

@@ -34,7 +34,7 @@ const ThemePreview = ({ colorMode }: Props) => {
           pt: '3',
           pb: '3',
 
-          '.focus-visible + label &': {
+          'input:focus-visible + label &': {
             px: '9px', // 12px padding normally - 3px extra padding added to parent div
             pt: '9px',
             pb: '15px',

@@ -34,7 +34,7 @@ const IconButton = ({ children, styles, icon, iconStyles, ...rest }: Props) => (
       height: '36px',
       flexShrink: 0,
 
-      '&.focus-visible': {
+      '&:focus-visible': {
         boxShadow: 'outline',
       },
 

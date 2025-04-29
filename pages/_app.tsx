@@ -4,7 +4,6 @@ import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 import { useEffect, useState } from 'react';
 import { ThemeUIProvider } from 'theme-ui';
-import 'focus-visible';
 
 import { theme } from '../constants/theme';
 import TypesafeI18n from '../src/i18n/i18n-react';

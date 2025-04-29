@@ -47,7 +47,7 @@ const RadioCard = ({
           p: '1px',
           cursor: 'pointer',
 
-          '.focus-visible + &': {
+          'input:focus-visible + &': {
             p: '4px',
             bg: 'outline',
           },
@@ -70,7 +70,7 @@ const RadioCard = ({
             alignItems: 'center',
             boxShadow: '4',
 
-            '.focus-visible + label &': {
+            'input:focus-visible + label &': {
               p: '9px', // 12px padding normally - 3px extra padding added to parent div
             },
           }}

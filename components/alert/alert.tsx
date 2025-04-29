@@ -60,7 +60,7 @@ function Alert({ children, href, startAt, endAt, important }: Props) {
           bg: isDarkTheme() ? 'border' : 'rgba(0,0,0,0.03)',
         },
 
-        '&.focus-visible': {
+        '&:focus-visible': {
           boxShadow: 'outline',
         },
       }}

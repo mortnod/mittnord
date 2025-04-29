@@ -62,7 +62,7 @@ function SearchField() {
             },
           },
 
-          '&.focus-visible': {
+          '&:focus': {
             boxShadow: 'outline',
           },
 
