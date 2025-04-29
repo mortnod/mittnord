@@ -39,8 +39,10 @@ const en = {
   ABOUT_THE_PEOPLE_HEADING: 'Who are you?',
   ABOUT_THE_PEOPLE_P1: 'Mitt Nord is created by ',
   ABOUT_THE_PEOPLE_P2:
-    '. Morten loves well crafted puns, well fermented sourdough bread, and well designed user experience. These days he makes a living making',
-  ABOUT_THE_PEOPLE_P3: 'journaling systems for psychologists',
+    ". Morten loves well crafted puns, well fermented sourdough bread, and well designed user experience. He's also made similar websites for ",
+  ABOUT_THE_PEOPLE_P3: '. These days he makes a living making',
+  ABOUT_THE_PEOPLE_P4: 'journaling systems for psychologists',
+  AND: 'and',
   ABOUT_CONTACT_US_HEADING: 'Getting in touch',
   ABOUT_CONTACT_US_P1: 'Got something to say? Send an email to ',
   ABOUT_CONTACT_US_P2: 'or',

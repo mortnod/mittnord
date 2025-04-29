@@ -190,8 +190,16 @@ function About() {
                   Morten Vaale Noddeland
                 </Link>
                 {LL.ABOUT_THE_PEOPLE_P2()}{' '}
+                <Link id="instabart-link" href="https://instabart.no">
+                  NTNU{' '}
+                </Link>
+                {LL.AND()}{' '}
+                <Link id="duio-link" href="https://duio.no">
+                  UiO
+                </Link>
+                {LL.ABOUT_THE_PEOPLE_P3()}{' '}
                 <Link id="konfidens-link" href="https://konfidens.no">
-                  {LL.ABOUT_THE_PEOPLE_P3()}
+                  {LL.ABOUT_THE_PEOPLE_P4()}
                 </Link>
                 .
               </P>

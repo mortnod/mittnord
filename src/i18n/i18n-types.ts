@@ -155,13 +155,21 @@ type RootTranslation = {
 	 */
 	ABOUT_THE_PEOPLE_P1: string
 	/**
-	 * .​ ​M​o​r​t​e​n​ ​e​r​ ​o​v​e​r​ ​g​j​e​n​n​o​m​s​n​i​t​t​l​i​g​ ​g​l​a​d​ ​i​ ​s​u​r​e​ ​o​r​d​s​p​i​l​l​,​ ​v​e​l​f​e​r​m​e​n​t​e​r​t​e​ ​s​u​r​d​e​i​g​s​b​r​ø​d​ ​o​g​ ​g​o​d​e​ ​b​r​u​k​e​r​o​p​p​l​e​v​e​l​s​e​r​.​ ​N​å​ ​f​o​r​ ​t​i​d​e​n​ ​l​e​v​e​r​ ​h​a​n​ ​a​v​ ​å​ ​l​a​g​e
+	 * .​ ​M​o​r​t​e​n​ ​e​r​ ​o​v​e​r​ ​g​j​e​n​n​o​m​s​n​i​t​t​l​i​g​ ​g​l​a​d​ ​i​ ​s​u​r​e​ ​o​r​d​s​p​i​l​l​,​ ​v​e​l​f​e​r​m​e​n​t​e​r​t​e​ ​s​u​r​d​e​i​g​s​b​r​ø​d​ ​o​g​ ​g​o​d​e​ ​b​r​u​k​e​r​o​p​p​l​e​v​e​l​s​e​r​.​ ​H​a​n​ ​h​a​r​ ​t​i​d​l​i​g​e​r​e​ ​l​a​g​e​t​ ​l​i​g​n​e​n​d​e​ ​n​e​t​t​s​i​d​e​r​ ​f​o​r
 	 */
 	ABOUT_THE_PEOPLE_P2: string
 	/**
-	 * j​o​u​r​n​a​l​s​y​s​t​e​m​e​r​ ​f​o​r​ ​p​s​y​k​o​l​o​g​e​r
+	 * .​ ​N​å​ ​f​o​r​ ​t​i​d​e​n​ ​l​e​v​e​r​ ​h​a​n​ ​a​v​ ​å​ ​l​a​g​e
 	 */
 	ABOUT_THE_PEOPLE_P3: string
+	/**
+	 * o​g
+	 */
+	AND: string
+	/**
+	 * j​o​u​r​n​a​l​s​y​s​t​e​m​e​r​ ​f​o​r​ ​p​s​y​k​o​l​o​g​e​r
+	 */
+	ABOUT_THE_PEOPLE_P4: string
 	/**
 	 * N​o​e​ ​p​å​ ​h​j​e​r​t​e​t​?
 	 */
@@ -342,13 +350,21 @@ export type TranslationFunctions = {
 	 */
 	ABOUT_THE_PEOPLE_P1: () => LocalizedString
 	/**
-	 * . Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Nå for tiden lever han av å lage
+	 * . Morten er over gjennomsnittlig glad i sure ordspill, velfermenterte surdeigsbrød og gode brukeropplevelser. Han har tidligere laget lignende nettsider for
 	 */
 	ABOUT_THE_PEOPLE_P2: () => LocalizedString
 	/**
-	 * journalsystemer for psykologer
+	 * . Nå for tiden lever han av å lage
 	 */
 	ABOUT_THE_PEOPLE_P3: () => LocalizedString
+	/**
+	 * og
+	 */
+	AND: () => LocalizedString
+	/**
+	 * journalsystemer for psykologer
+	 */
+	ABOUT_THE_PEOPLE_P4: () => LocalizedString
 	/**
 	 * Noe på hjertet?
 	 */
