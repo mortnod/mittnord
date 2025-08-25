@@ -5,7 +5,7 @@ import { useTheme } from '../../constants/theme';
 import { useI18nContext } from '../../src/i18n/i18n-react';
 import isDarkTheme from '../../utils/isDarkTheme';
 import IconButton from '../iconButton/iconButton';
-import Search from '../icons/search';
+import PaperPlane2 from '../icons/paperPlane2';
 
 function SearchField() {
   const searchInput = useRef<HTMLInputElement>(null);
@@ -83,12 +83,12 @@ function SearchField() {
         }}
       />
       <IconButton
-        icon={<Search />}
+        icon={<PaperPlane2 />}
         type="submit"
         styles={{
           position: 'absolute',
           top: '50%',
-          right: 1,
+          right: '6px',
           ml: 6,
           mt: '-18px',
 
