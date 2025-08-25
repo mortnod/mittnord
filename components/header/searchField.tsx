@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { useRef } from 'react';
 
+import { useTheme } from '../../constants/theme';
 import { useI18nContext } from '../../src/i18n/i18n-react';
 import isDarkTheme from '../../utils/isDarkTheme';
 import IconButton from '../iconButton/iconButton';
@@ -9,6 +10,10 @@ import Search from '../icons/search';
 function SearchField() {
   const searchInput = useRef<HTMLInputElement>(null);
   const { LL } = useI18nContext();
+  const { colorMode } = useTheme();
+
+  const noraImg =
+    colorMode === 'dawn' ? 'images/nora-warm.png' : 'images/nora-cold.png';
 
   const getRandomPlaceholder = () => {
     const taglines = [
@@ -31,6 +36,11 @@ function SearchField() {
         window.open(`${LL.SEARCH_URL()}${searchInput.current?.value}`);
       }}
     >
+      <img
+        src={noraImg}
+        alt="Ask Nora"
+        sx={{ size: 10, position: 'absolute', bottom: 0, left: 2 }}
+      />
       <input
         placeholder={getRandomPlaceholder()}
         ref={searchInput}
@@ -41,7 +51,7 @@ function SearchField() {
           fontFamily: 'sans',
           fontSize: 'md',
           py: 3,
-          pl: 4,
+          pl: '60px',
           pr: 10,
 
           border: 0,
